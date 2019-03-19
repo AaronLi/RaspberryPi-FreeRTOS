@@ -41,6 +41,43 @@ void task2() {
 		vTaskDelay(100);
 	}
 }
+void blinkDot(){
+	SetGpio(26, 1);
+	vTaskDelay(300);
+	SetGpio(26, 0);
+	vTaskDelay(200);
+}
+void blinkDash(){
+	SetGpio(26, 1);
+	vTaskDelay(700);
+	SetGpio(26, 0);
+	vTaskDelay(200);
+}
+
+void restSpace(){
+	vTaskDelay(800);
+}
+void task3(){
+	char message[] = ".-- .. -. ... .- -";
+	while(1){
+		for(int i = 0; message[i]; i++){
+			switch(message[i]){
+				case '.':
+					blinkDot();
+					break;
+				case '-':
+					blinkDash();
+					break;
+				case ' ':
+					restSpace();
+					break;
+				default:
+					break;
+			}
+		}
+		vTaskDelay(1000);
+	}
+}
 
 //server task does not work in this build, it fails to accept a connection
 void serverTask(){
@@ -317,15 +354,15 @@ uint8_t *pucRxBuffer;
 
 
 int main(void) {
-	SetGpioFunction(47, 1);			// RDY led
+	SetGpioFunction(26, 1);			// RDY led
 
 	initFB();
-	SetGpio(47, 1);
+	SetGpio(26, 0);
 	//videotest();
 
 	DisableInterrupts();
 	InitInterruptController();
-
+	/*
 	//ensure the IP and gateway match the router settings!
 	//const unsigned char ucIPAddress[ 4 ] = {192, 168, 1, 42};
 	const unsigned char ucIPAddress[ 4 ] = {192, 168, 1, 9};
@@ -341,7 +378,9 @@ int main(void) {
 
 	xTaskCreate(task1, "LED_0", 128, NULL, 0, NULL);
 	xTaskCreate(task2, "LED_1", 128, NULL, 0, NULL);
+	*/
 
+	xTaskCreate(task3, "HELLO_WORLD_BLINK", 128, NULL, 0, NULL);
 	//set to 0 for no debug, 1 for debug, or 2 for GCC instrumentation (if enabled in config)
 	loaded = 1;
 
