@@ -96,7 +96,7 @@ LOAD /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plu
                 0x00000000000080e0                __module_entries_end = .
                 0x0000000000000000                __module_entries_size = SIZEOF (.module_entries)
 
-.text           0x0000000000010000    0x28d9c
+.text           0x0000000000010000    0x28654
  *(.text)
  .text          0x0000000000010000      0x354 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
                 0x0000000000010000                pxPortInitialiseStack
@@ -202,741 +202,738 @@ LOAD /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plu
  .text          0x00000000000152a0       0x28 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/startup.o
                 0x00000000000152b8                PUT32
                 0x00000000000152c0                GET32
- .text          0x00000000000152c8      0x938 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
-                0x00000000000152c8                task1
-                0x0000000000015300                task2
-                0x0000000000015340                blinkDot
-                0x0000000000015378                blinkDash
-                0x00000000000153b0                restSpace
-                0x00000000000153c8                task3
-                0x0000000000015480                serverTask
-                0x00000000000155a4                serverListenTask
-                0x0000000000015b7c                main
- .text          0x0000000000015c00       0xec /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
-                0x0000000000015c00                mailboxWrite
-                0x0000000000015c6c                mailboxRead
- .text          0x0000000000015cec      0x32c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
-                0x0000000000015cec                __cyg_profile_func_enter
-                0x0000000000015e74                __cyg_profile_func_exit
- .text          0x0000000000016018      0x3d8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
-                0x0000000000016018                memset
-                0x000000000001607c                memmove
-                0x000000000001612c                memcpy2
-                0x00000000000161a0                memcmp
-                0x0000000000016240                strcpy
-                0x00000000000162a0                strncpy
-                0x0000000000016348                strlen
-                0x000000000001639c                rand
- .text          0x00000000000163f0      0xa20 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
-                0x00000000000163f0                enablelogging
-                0x0000000000016418                initFB
-                0x000000000001664c                drawPixel
-                0x00000000000166b0                drawRect
-                0x0000000000016740                drawChar
-                0x000000000001686c                drawString
-                0x00000000000168d8                println
-                0x0000000000016b10                printHex
-                0x0000000000016d2c                videotest
- .text          0x0000000000016e10      0x478 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
-                0x0000000000016e10                MsDelay
-                0x0000000000016e78                usDelay
-                0x0000000000016ed8                StartKernelTimer
-                0x0000000000016f14                CancelKernelTimer
-                0x0000000000016f40                ConnectInterrupt
-                0x0000000000016f84                SetPowerStateOn
-                0x000000000001704c                GetMACAddress
-                0x0000000000017170                LogWrite
-                0x00000000000171a8                uspi_assertion_failed
-                0x00000000000171f4                DebugHexdump
-                0x0000000000017228                malloc
-                0x000000000001725c                free
- .text          0x0000000000017288     0x1088 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
-                0x0000000000017288                USPiInitialize
-                0x00000000000175d4                USPiKeyboardAvailable
-                0x0000000000017630                USPiKeyboardRegisterKeyPressedHandler
-                0x00000000000176c4                USPiKeyboardRegisterShutdownHandler
-                0x0000000000017758                USPiKeyboardRegisterKeyStatusHandlerRaw
-                0x00000000000177ec                USPiMouseAvailable
-                0x0000000000017848                USPiMouseRegisterStatusHandler
-                0x00000000000178dc                USPiMassStorageDeviceAvailable
-                0x0000000000017970                USPiMassStorageDeviceRead
-                0x0000000000017a5c                USPiMassStorageDeviceWrite
-                0x0000000000017b48                USPiMassStorageDeviceGetCapacity
-                0x0000000000017be8                USPiEthernetAvailable
-                0x0000000000017c44                USPiGetMACAddress
-                0x0000000000017d08                USPiSendFrame
-                0x0000000000017db8                USPiReceiveFrame
-                0x0000000000017e68                USPiGamePadAvailable
-                0x0000000000017f04                USPiGamePadRegisterStatusHandler
-                0x0000000000017fc4                USPiGamePadGetStatus
-                0x0000000000018094                USPiDeviceGetInformation
- .text          0x0000000000018310     0x3594 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
-                0x0000000000018310                DWHCIDevice
-                0x00000000000183c0                _DWHCIDevice
-                0x00000000000183ec                DWHCIDeviceInitialize
-                0x0000000000018690                DWHCIDeviceGetDescriptor
-                0x0000000000018748                DWHCIDeviceSetAddress
-                0x00000000000187ec                DWHCIDeviceSetConfiguration
-                0x0000000000018890                DWHCIDeviceControlMessage
-                0x0000000000018a14                DWHCIDeviceTransfer
-                0x0000000000018ac4                DWHCIDeviceSubmitBlockingRequest
-                0x0000000000018dc0                DWHCIDeviceSubmitAsyncRequest
-                0x0000000000018ef0                DWHCIDeviceInitCore
-                0x0000000000019224                DWHCIDeviceInitHost
-                0x0000000000019500                DWHCIDeviceEnableRootPort
-                0x0000000000019628                DWHCIDeviceReset
-                0x000000000001972c                DWHCIDeviceEnableGlobalInterrupts
-                0x00000000000197b4                DWHCIDeviceEnableCommonInterrupts
-                0x000000000001982c                DWHCIDeviceEnableHostInterrupts
-                0x00000000000198cc                DWHCIDeviceEnableChannelInterrupt
-                0x0000000000019970                DWHCIDeviceDisableChannelInterrupt
-                0x0000000000019a18                DWHCIDeviceFlushTxFIFO
-                0x0000000000019af4                DWHCIDeviceFlushRxFIFO
-                0x0000000000019ba4                DWHCIDeviceTransferStage
-                0x0000000000019cb4                DWHCIDeviceCompletionRoutine
-                0x0000000000019d10                DWHCIDeviceTransferStageAsync
-                0x0000000000019f2c                DWHCIDeviceStartTransaction
-                0x000000000001a0b8                DWHCIDeviceStartChannel
-                0x000000000001a640                DWHCIDeviceChannelInterruptHandler
-                0x000000000001ada0                DWHCIDeviceInterruptHandler
-                0x000000000001af70                DWHCIDeviceTimerHandler
-                0x000000000001b0cc                DWHCIDeviceAllocateChannel
-                0x000000000001b194                DWHCIDeviceFreeChannel
-                0x000000000001b268                DWHCIDeviceWaitForBit
-                0x000000000001b3a0                DWHCIDeviceGetPortSpeed
-                0x000000000001b464                DWHCIDeviceOvercurrentDetected
-                0x000000000001b4f8                DWHCIDeviceDisableRootPort
-                0x000000000001b580                DWHCIDeviceDumpRegister
-                0x000000000001b608                DWHCIDeviceDumpStatus
- .text          0x000000000001b8a4      0x71c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
-                0x000000000001b8a4                DWHCIRegister
-                0x000000000001b900                DWHCIRegister2
-                0x000000000001b96c                _DWHCIRegister
-                0x000000000001b9b8                DWHCIRegisterRead
-                0x000000000001ba20                DWHCIRegisterWrite
-                0x000000000001baa0                DWHCIRegisterGet
-                0x000000000001bb10                DWHCIRegisterSet
-                0x000000000001bb6c                DWHCIRegisterIsSet
-                0x000000000001bbf8                DWHCIRegisterAnd
-                0x000000000001bc7c                DWHCIRegisterOr
-                0x000000000001bd00                DWHCIRegisterClearBit
-                0x000000000001bdb4                DWHCIRegisterSetBit
-                0x000000000001be64                DWHCIRegisterClearAll
-                0x000000000001bebc                DWHCIRegisterSetAll
-                0x000000000001bf14                DWHCIRegisterDump
- .text          0x000000000001bfc0     0x14b4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
-                0x000000000001bfc0                DWHCITransferStageData
-                0x000000000001c514                _DWHCITransferStageData
-                0x000000000001c5f8                DWHCITransferStageDataTransactionComplete
-                0x000000000001c800                DWHCITransferStageDataSetSplitComplete
-                0x000000000001c878                DWHCITransferStageDataSetState
-                0x000000000001c8c8                DWHCITransferStageDataGetState
-                0x000000000001c910                DWHCITransferStageDataSetSubState
-                0x000000000001c960                DWHCITransferStageDataGetSubState
-                0x000000000001c9a8                DWHCITransferStageDataBeginSplitCycle
-                0x000000000001c9cc                DWHCITransferStageDataGetChannelNumber
-                0x000000000001ca14                DWHCITransferStageDataIsPeriodic
-                0x000000000001cab8                DWHCITransferStageDataGetDeviceAddress
-                0x000000000001cb34                DWHCITransferStageDataGetEndpointType
-                0x000000000001cc18                DWHCITransferStageDataGetEndpointNumber
-                0x000000000001cc94                DWHCITransferStageDataGetMaxPacketSize
-                0x000000000001ccdc                DWHCITransferStageDataGetSpeed
-                0x000000000001cd24                DWHCITransferStageDataGetPID
-                0x000000000001ce10                DWHCITransferStageDataIsDirectionIn
-                0x000000000001ce58                DWHCITransferStageDataIsStatusStage
-                0x000000000001cea0                DWHCITransferStageDataGetDMAAddress
-                0x000000000001cf10                DWHCITransferStageDataGetBytesToTransfer
-                0x000000000001cf58                DWHCITransferStageDataGetPacketsToTransfer
-                0x000000000001cfa0                DWHCITransferStageDataIsSplit
-                0x000000000001cfe8                DWHCITransferStageDataIsSplitComplete
-                0x000000000001d058                DWHCITransferStageDataGetHubAddress
-                0x000000000001d0fc                DWHCITransferStageDataGetHubPortAddress
-                0x000000000001d1a0                DWHCITransferStageDataGetSplitPosition
-                0x000000000001d20c                DWHCITransferStageDataGetStatusMask
-                0x000000000001d288                DWHCITransferStageDataGetTransactionStatus
-                0x000000000001d2f8                DWHCITransferStageDataIsStageComplete
-                0x000000000001d350                DWHCITransferStageDataGetResultLen
-                0x000000000001d3bc                DWHCITransferStageDataGetURB
-                0x000000000001d42c                DWHCITransferStageDataGetFrameScheduler
- .text          0x000000000001d474      0x5e8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
-                0x000000000001d474                USBConfigurationParser
-                0x000000000001d7b0                _USBConfigurationParser
-                0x000000000001d7fc                USBConfigurationParserIsValid
-                0x000000000001d844                USBConfigurationParserGetDescriptor
-                0x000000000001d9ac                USBConfigurationParserError
- .text          0x000000000001da5c     0x1514 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
-                0x000000000001da5c                USBDevice
-                0x000000000001dc24                USBDeviceCopy
-                0x000000000001df38                _USBDevice
-                0x000000000001e080                USBDeviceInitialize
-                0x000000000001e774                USBDeviceConfigure
-                0x000000000001e87c                USBDeviceGetName
-                0x000000000001eb0c                USBDeviceGetAddress
-                0x000000000001eb54                USBDeviceGetSpeed
-                0x000000000001eb9c                USBDeviceGetHubAddress
-                0x000000000001ebe4                USBDeviceGetHubPortNumber
-                0x000000000001ec2c                USBDeviceGetEndpoint0
-                0x000000000001ec9c                USBDeviceGetHost
-                0x000000000001ed0c                USBDeviceGetDeviceDescriptor
-                0x000000000001ed7c                USBDeviceGetConfigurationDescriptor
-                0x000000000001edec                USBDeviceGetDescriptor
-                0x000000000001ee78                USBDeviceConfigurationError
-                0x000000000001eef8                USBDeviceSetAddress
- .text          0x000000000001ef70      0x414 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
-                0x000000000001ef70                USBDeviceFactoryGetDevice
-                0x000000000001f064                GetDevice
- .text          0x000000000001f384      0x94c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
-                0x000000000001f384                USBEndpoint
-                0x000000000001f444                USBEndpoint2
-                0x000000000001f6c8                USBEndpointCopy
-                0x000000000001f7c8                _USBEndpoint
-                0x000000000001f814                USBEndpointGetDevice
-                0x000000000001f884                USBEndpointGetNumber
-                0x000000000001f8cc                USBEndpointGetType
-                0x000000000001f914                USBEndpointIsDirectionIn
-                0x000000000001f95c                USBEndpointSetMaxPacketSize
-                0x000000000001f9ac                USBEndpointGetMaxPacketSize
-                0x000000000001f9f4                USBEndpointGetInterval
-                0x000000000001fa64                USBEndpointGetNextPID
-                0x000000000001faec                USBEndpointSkipPID
-                0x000000000001fc5c                USBEndpointResetPID
- .text          0x000000000001fcd0      0x5dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
-                0x000000000001fcd0                USBRequest
-                0x000000000001fde8                _USBRequest
-                0x000000000001fe58                USBRequestGetEndpoint
-                0x000000000001fec8                USBRequestSetStatus
-                0x000000000001ff18                USBRequestSetResultLen
-                0x000000000001ff68                USBRequestGetStatus
-                0x000000000001ffb0                USBRequestGetResultLength
-                0x0000000000020020                USBRequestGetSetupData
-                0x00000000000200c4                USBRequestGetBuffer
-                0x0000000000020144                USBRequestGetBufLen
-                0x000000000002018c                USBRequestSetCompletionRoutine
-                0x0000000000020224                USBRequestCallCompletionRoutine
- .text          0x00000000000202ac     0x13f8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
-                0x00000000000202ac                USBStandardHub
-                0x0000000000020374                _USBStandardHub
-                0x00000000000204c4                USBStandardHubInitialize
-                0x0000000000020514                USBStandardHubConfigure
-                0x00000000000209e0                USBStandardHubEnumeratePorts
-                0x0000000000021538                USBStandardHubGetDeviceNames
- .text          0x00000000000216a4      0x448 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
-                0x00000000000216a4                DeviceNameService
-                0x000000000002172c                _DeviceNameService
-                0x000000000002181c                DeviceNameServiceAddDevice
-                0x000000000002197c                DeviceNameServiceGetDevice
-                0x0000000000021aa4                DeviceNameServiceGet
- .text          0x0000000000021aec      0x568 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
-                0x0000000000021aec                MACAddress
-                0x0000000000021b38                MACAddress2
-                0x0000000000021b88                _MACAddress
-                0x0000000000021bd4                MACAddressIsEqual
-                0x0000000000021c78                MACAddressSet
-                0x0000000000021d04                MACAddressSetBroadcast
-                0x0000000000021d68                MACAddressGet
-                0x0000000000021dd8                MACAddressCopyTo
-                0x0000000000021e80                MACAddressIsBroadcast
-                0x0000000000021f34                MACAddressGetSize
-                0x0000000000021f58                MACAddressFormat
- .text          0x0000000000022054      0xed8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
-                0x0000000000022054                SMSC951xDevice
-                0x000000000002211c                _SMSC951xDevice
-                0x000000000002220c                SMSC951xDeviceConfigure
-                0x0000000000022760                SMSC951xDeviceGetMACAddress
-                0x00000000000227a8                SMSC951xDeviceSendFrame
-                0x00000000000228f8                SMSC951xDeviceReceiveFrame
-                0x0000000000022b54                SMSC951xDeviceWriteReg
-                0x0000000000022c00                SMSC951xDeviceReadReg
-                0x0000000000022cb0                SMSC951xDeviceDumpReg
-                0x0000000000022d5c                SMSC951xDeviceDumpRegs
- .text          0x0000000000022f2c      0xfac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
-                0x0000000000022f2c                String
-                0x0000000000022f84                String2
-                0x0000000000023014                _String
-                0x0000000000023080                StringGet
-                0x00000000000230e4                StringSet
-                0x000000000002319c                StringGetLength
-                0x0000000000023208                StringAppend
-                0x0000000000023324                StringCompare
-                0x0000000000023380                StringFind
-                0x0000000000023428                StringFormat
-                0x000000000002348c                StringFormatV
-                0x0000000000023b64                StringPutChar
-                0x0000000000023bf0                StringPutString
-                0x0000000000023c78                StringReserveSpace
-                0x0000000000023d98                ntoa
- .text          0x0000000000023ed8      0x548 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
-                0x0000000000023ed8                uspi_memset
-                0x0000000000023f3c                uspi_memcpy2
-                0x0000000000023fb0                uspi_memcmp
-                0x000000000002405c                uspi_strlen
-                0x00000000000240b0                uspi_strcmp
-                0x0000000000024194                uspi_strcpy
-                0x0000000000024204                uspi_strncpy
-                0x00000000000242a4                uspi_strcat
-                0x0000000000024334                uspi_char2int
-                0x0000000000024380                uspi_le2be16
-                0x00000000000243cc                uspi_le2be32
- .text          0x0000000000024420     0x132c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
-                0x0000000000024420                USBBulkOnlyMassStorageDevice
-                0x00000000000244c4                _USBBulkOnlyMassStorageDevice
-                0x0000000000024588                USBBulkOnlyMassStorageDeviceConfigure
-                0x0000000000024c70                USBBulkOnlyMassStorageDeviceRead
-                0x0000000000024d30                USBBulkOnlyMassStorageDeviceWrite
-                0x0000000000024df0                USBBulkOnlyMassStorageDeviceSeek
-                0x0000000000024e4c                USBBulkOnlyMassStorageDeviceGetCapacity
-                0x0000000000024e94                USBBulkOnlyMassStorageDeviceTryRead
-                0x000000000002505c                USBBulkOnlyMassStorageDeviceTryWrite
-                0x0000000000025220                USBBulkOnlyMassStorageDeviceCommand
-                0x0000000000025570                USBBulkOnlyMassStorageDeviceReset
- .text          0x000000000002574c      0x430 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
-                0x000000000002574c                DWHCIFrameSchedulerNonPeriodic
-                0x0000000000025800                _DWHCIFrameSchedulerNonPeriodic
-                0x0000000000025854                DWHCIFrameSchedulerNonPeriodicStartSplit
-                0x00000000000258a8                DWHCIFrameSchedulerNonPeriodicCompleteSplit
-                0x0000000000025980                DWHCIFrameSchedulerNonPeriodicTransactionComplete
-                0x0000000000025b38                DWHCIFrameSchedulerNonPeriodicWaitForFrame
-                0x0000000000025b58                DWHCIFrameSchedulerNonPeriodicIsOddFrame
- .text          0x0000000000025b7c      0x568 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
-                0x0000000000025b7c                DWHCIFrameSchedulerPeriodic
-                0x0000000000025c3c                _DWHCIFrameSchedulerPeriodic
-                0x0000000000025c90                DWHCIFrameSchedulerPeriodicStartSplit
-                0x0000000000025cf0                DWHCIFrameSchedulerPeriodicCompleteSplit
-                0x0000000000025e08                DWHCIFrameSchedulerPeriodicTransactionComplete
-                0x0000000000025f9c                DWHCIFrameSchedulerPeriodicWaitForFrame
-                0x0000000000026080                DWHCIFrameSchedulerPeriodicIsOddFrame
- .text          0x00000000000260e4      0x690 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
-                0x00000000000260e4                KeyMap
-                0x0000000000026160                _KeyMap
-                0x0000000000026180                KeyMapClearTable
-                0x0000000000026228                KeyMapSetEntry
-                0x00000000000262ec                KeyMapTranslate
-                0x0000000000026534                KeyMapGetString
-                0x00000000000266d4                KeyMapGetLEDStatus
- .text          0x0000000000026774      0xd50 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
-                0x0000000000026774                USBKeyboardDevice
-                0x0000000000026894                _CUSBKeyboardDevice
-                0x0000000000026958                USBKeyboardDeviceConfigure
-                0x0000000000026d40                USBKeyboardDeviceRegisterKeyPressedHandler
-                0x0000000000026db4                USBKeyboardDeviceRegisterSelectConsoleHandler
-                0x0000000000026e28                USBKeyboardDeviceRegisterShutdownHandler
-                0x0000000000026e9c                USBKeyboardDeviceRegisterKeyStatusHandlerRaw
- .text          0x00000000000274c4      0x4a4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
-                0x00000000000274c4                DWHCIRootPort
-                0x0000000000027548                _DWHCIRootPort
-                0x00000000000275d0                DWHCIRootPortInitialize
- .text          0x0000000000027968      0x8e4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
-                0x0000000000027968                USBMouseDevice
-                0x0000000000027a3c                _CUSBMouseDevice
-                0x0000000000027af0                USBMouseDeviceConfigure
-                0x0000000000027ed8                USBMouseDeviceRegisterStatusHandler
- .text          0x000000000002824c      0x2ac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
-                0x000000000002824c                DWHCIFrameSchedulerNoSplit
-                0x0000000000028310                _DWHCIFrameSchedulerNoSplit
-                0x0000000000028330                DWHCIFrameSchedulerNoSplitStartSplit
-                0x0000000000028364                DWHCIFrameSchedulerNoSplitCompleteSplit
-                0x000000000002839c                DWHCIFrameSchedulerNoSplitTransactionComplete
-                0x00000000000283d4                DWHCIFrameSchedulerNoSplitWaitForFrame
-                0x0000000000028494                DWHCIFrameSchedulerNoSplitIsOddFrame
- .text          0x00000000000284f8     0x1764 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
-                0x00000000000284f8                USBGamePadDevice
-                0x00000000000286dc                _CUSBGamePadDevice
-                0x0000000000029140                USBGamePadDeviceConfigure
-                0x0000000000029744                USBGamePadDeviceRegisterStatusHandler
-                0x0000000000029a70                USBGamePadDeviceGetReport
- .text          0x0000000000029c5c      0x12c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
-                0x0000000000029c5c                uspi_EnterCritical
-                0x0000000000029cd4                uspi_LeaveCritical
-                0x0000000000029d58                uspi_CleanAndInvalidateDataCacheRange
- .text          0x0000000000029d88      0xc10 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
-                0x0000000000029d88                USBString
-                0x0000000000029e5c                USBStringCopy
-                0x0000000000029ff0                _USBString
-                0x000000000002a0bc                USBStringGetFromDescriptor
-                0x000000000002a5f4                USBStringGet
-                0x000000000002a648                USBStringGetLanguageID
- .text          0x000000000002a998      0xd54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
-                0x000000000002a998                eARPProcessPacket
-                0x000000000002ad3c                vARPRefreshCacheEntry
-                0x000000000002b0b8                eARPGetCacheEntry
-                0x000000000002b30c                vARPAgeCache
-                0x000000000002b500                vARPSendGratuitous
-                0x000000000002b528                FreeRTOS_OutputARPRequest
-                0x000000000002b580                vARPGenerateRequestPacket
-                0x000000000002b6c8                FreeRTOS_ClearARP
- .text          0x000000000002b6ec        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .text          0x000000000002b6ec      0x89c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
-                0x000000000002b738                FreeRTOS_gethostbyname
-                0x000000000002bb9c                ulDNSHandlePacket
- .text          0x000000000002bf88     0x1ee0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
-                0x000000000002c18c                xIsCallingFromIPTask
-                0x000000000002c584                FreeRTOS_NetworkDown
-                0x000000000002c5e4                FreeRTOS_NetworkDownFromISR
-                0x000000000002c658                FreeRTOS_GetUDPPayloadBuffer
-                0x000000000002c6d0                pxDuplicateNetworkBufferWithDescriptor
-                0x000000000002c764                pxPacketBuffer_to_NetworkBuffer
-                0x000000000002c7dc                pxUDPPayloadBuffer_to_NetworkBuffer
-                0x000000000002c854                FreeRTOS_ReleaseUDPPayloadBuffer
-                0x000000000002c884                FreeRTOS_IPInit
-                0x000000000002cb40                FreeRTOS_GetAddressConfiguration
-                0x000000000002cbec                FreeRTOS_SetAddressConfiguration
-                0x000000000002cc98                xSendEventToIPTask
-                0x000000000002cce4                xSendEventStructToIPTask
-                0x000000000002ce5c                eConsiderFrameForProcessing
-                0x000000000002cf94                vIPNetworkUpCalls
-                0x000000000002d694                usGenerateProtocolChecksum
-                0x000000000002d8f0                usGenerateChecksum
-                0x000000000002dc34                vReturnEthernetFrame
-                0x000000000002dce0                FreeRTOS_GetIPAddress
-                0x000000000002dd04                FreeRTOS_SetIPAddress
-                0x000000000002dd34                FreeRTOS_GetGatewayAddress
-                0x000000000002dd58                FreeRTOS_GetDNSServerAddress
-                0x000000000002dd7c                FreeRTOS_GetNetmask
-                0x000000000002dda0                FreeRTOS_GetMACAddress
-                0x000000000002ddc0                FreeRTOS_SetNetmask
-                0x000000000002ddf0                FreeRTOS_SetGatewayAddress
-                0x000000000002de20                xIPIsNetworkTaskReady
-                0x000000000002de44                FreeRTOS_IsNetworkUp
- .text          0x000000000002de68     0x3558 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
-                0x000000000002e278                vNetworkSocketsInit
-                0x000000000002e400                FreeRTOS_socket
-                0x000000000002e5ec                FreeRTOS_recvfrom
-                0x000000000002e81c                FreeRTOS_sendto
-                0x000000000002ea0c                FreeRTOS_bind
-                0x000000000002eb6c                vSocketBind
-                0x000000000002ed28                FreeRTOS_closesocket
-                0x000000000002edbc                vSocketClose
-                0x000000000002efe0                FreeRTOS_setsockopt
-                0x000000000002f6d8                pxUDPSocketLookup
-                0x000000000002f730                FreeRTOS_inet_addr
-                0x000000000002f8f4                FreeRTOS_GetLocalAddress
-                0x000000000002f970                vWakeUpSocketUser
-                0x000000000002fbf4                FreeRTOS_connect
-                0x000000000002fd10                FreeRTOS_accept
-                0x000000000002ffd4                FreeRTOS_recv
-                0x000000000003039c                FreeRTOS_get_tx_head
-                0x0000000000030450                FreeRTOS_send
-                0x0000000000030700                FreeRTOS_listen
-                0x0000000000030860                FreeRTOS_shutdown
-                0x00000000000308fc                xTCPTimerCheck
-                0x0000000000030aa4                pxTCPSocketLookup
-                0x0000000000030ba8                FreeRTOS_get_rx_buf
-                0x0000000000030d58                lTCPAddRxdata
-                0x0000000000030e70                FreeRTOS_outstanding
-                0x0000000000030ee8                FreeRTOS_recvcount
-                0x0000000000030f60                FreeRTOS_GetRemoteAddress
-                0x0000000000031038                FreeRTOS_maywrite
-                0x00000000000310fc                FreeRTOS_tx_space
-                0x0000000000031178                FreeRTOS_tx_size
-                0x00000000000311f0                FreeRTOS_issocketconnected
-                0x0000000000031268                FreeRTOS_mss
-                0x00000000000312bc                FreeRTOS_connstatus
-                0x0000000000031310                FreeRTOS_rx_size
-                0x0000000000031388                FreeRTOS_netstat
- .text          0x00000000000313c0      0x5dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
-                0x0000000000031618                uxStreamBufferAdd
-                0x00000000000317ec                uxStreamBufferGet
- .text          0x000000000003199c     0x4704 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
-                0x0000000000031dac                xTCPSocketCheck
-                0x00000000000332e8                vTCPStateChange
-                0x0000000000035534                xProcessReceivedTCPPacket
-                0x0000000000035f9c                xTCPCheckNewClient
- .text          0x00000000000360a0     0x1de0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
-                0x000000000003629c                vListInsertGeneric
-                0x000000000003661c                xTCPWindowRxEmpty
-                0x0000000000036800                vTCPWindowDestroy
-                0x00000000000368a4                vTCPWindowCreate
-                0x0000000000036980                vTCPWindowInit
-                0x0000000000036c28                lTCPWindowRxCheck
-                0x000000000003702c                lTCPWindowTxAdd
-                0x0000000000037334                xTCPWindowTxDone
-                0x0000000000037478                xTCPWindowTxHasData
-                0x00000000000375dc                ulTCPWindowTxGet
-                0x0000000000037d70                ulTCPWindowTxAck
-                0x0000000000037dd8                ulTCPWindowTxSack
- .text          0x0000000000037e80      0x618 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
-                0x0000000000037e80                vProcessGeneratedUDPPacket
-                0x00000000000382f0                xProcessReceivedUDPPacket
- .text          0x0000000000038498      0x458 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
-                0x0000000000038498                xNetworkBuffersInitialise
-                0x0000000000038604                pucGetNetworkBuffer
-                0x0000000000038670                vReleaseNetworkBuffer
-                0x00000000000386ac                pxGetNetworkBufferWithDescriptor
-                0x00000000000387fc                vReleaseNetworkBufferAndDescriptor
-                0x00000000000388a8                uxGetNumberOfFreeNetworkBuffers
-                0x00000000000388cc                uxGetMinimumFreeNetworkBuffers
- .text          0x00000000000388f0      0x394 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
-                0x00000000000388f0                ethernetPollTask
-                0x0000000000038b8c                xNetworkInterfaceInitialise
-                0x0000000000038c34                xNetworkInterfaceOutput
- .text          0x0000000000038c84      0x114 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
-                0x0000000000038c84                __udivsi3
-                0x0000000000038c84                __aeabi_uidiv
-                0x0000000000038d78                __aeabi_uidivmod
- .text          0x0000000000038d98        0x4 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
-                0x0000000000038d98                __aeabi_ldiv0
-                0x0000000000038d98                __aeabi_idiv0
+ .text          0x00000000000152c8      0x1f0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+                0x00000000000152c8                blinkDot
+                0x0000000000015300                blinkDash
+                0x0000000000015338                restSpace
+                0x0000000000015350                task3
+                0x0000000000015428                main
+ .text          0x00000000000154b8       0xec /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+                0x00000000000154b8                mailboxWrite
+                0x0000000000015524                mailboxRead
+ .text          0x00000000000155a4      0x32c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+                0x00000000000155a4                __cyg_profile_func_enter
+                0x000000000001572c                __cyg_profile_func_exit
+ .text          0x00000000000158d0      0x3d8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+                0x00000000000158d0                memset
+                0x0000000000015934                memmove
+                0x00000000000159e4                memcpy2
+                0x0000000000015a58                memcmp
+                0x0000000000015af8                strcpy
+                0x0000000000015b58                strncpy
+                0x0000000000015c00                strlen
+                0x0000000000015c54                rand
+ .text          0x0000000000015ca8      0xa20 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+                0x0000000000015ca8                enablelogging
+                0x0000000000015cd0                initFB
+                0x0000000000015f04                drawPixel
+                0x0000000000015f68                drawRect
+                0x0000000000015ff8                drawChar
+                0x0000000000016124                drawString
+                0x0000000000016190                println
+                0x00000000000163c8                printHex
+                0x00000000000165e4                videotest
+ .text          0x00000000000166c8      0x478 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+                0x00000000000166c8                MsDelay
+                0x0000000000016730                usDelay
+                0x0000000000016790                StartKernelTimer
+                0x00000000000167cc                CancelKernelTimer
+                0x00000000000167f8                ConnectInterrupt
+                0x000000000001683c                SetPowerStateOn
+                0x0000000000016904                GetMACAddress
+                0x0000000000016a28                LogWrite
+                0x0000000000016a60                uspi_assertion_failed
+                0x0000000000016aac                DebugHexdump
+                0x0000000000016ae0                malloc
+                0x0000000000016b14                free
+ .text          0x0000000000016b40     0x1088 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+                0x0000000000016b40                USPiInitialize
+                0x0000000000016e8c                USPiKeyboardAvailable
+                0x0000000000016ee8                USPiKeyboardRegisterKeyPressedHandler
+                0x0000000000016f7c                USPiKeyboardRegisterShutdownHandler
+                0x0000000000017010                USPiKeyboardRegisterKeyStatusHandlerRaw
+                0x00000000000170a4                USPiMouseAvailable
+                0x0000000000017100                USPiMouseRegisterStatusHandler
+                0x0000000000017194                USPiMassStorageDeviceAvailable
+                0x0000000000017228                USPiMassStorageDeviceRead
+                0x0000000000017314                USPiMassStorageDeviceWrite
+                0x0000000000017400                USPiMassStorageDeviceGetCapacity
+                0x00000000000174a0                USPiEthernetAvailable
+                0x00000000000174fc                USPiGetMACAddress
+                0x00000000000175c0                USPiSendFrame
+                0x0000000000017670                USPiReceiveFrame
+                0x0000000000017720                USPiGamePadAvailable
+                0x00000000000177bc                USPiGamePadRegisterStatusHandler
+                0x000000000001787c                USPiGamePadGetStatus
+                0x000000000001794c                USPiDeviceGetInformation
+ .text          0x0000000000017bc8     0x3594 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+                0x0000000000017bc8                DWHCIDevice
+                0x0000000000017c78                _DWHCIDevice
+                0x0000000000017ca4                DWHCIDeviceInitialize
+                0x0000000000017f48                DWHCIDeviceGetDescriptor
+                0x0000000000018000                DWHCIDeviceSetAddress
+                0x00000000000180a4                DWHCIDeviceSetConfiguration
+                0x0000000000018148                DWHCIDeviceControlMessage
+                0x00000000000182cc                DWHCIDeviceTransfer
+                0x000000000001837c                DWHCIDeviceSubmitBlockingRequest
+                0x0000000000018678                DWHCIDeviceSubmitAsyncRequest
+                0x00000000000187a8                DWHCIDeviceInitCore
+                0x0000000000018adc                DWHCIDeviceInitHost
+                0x0000000000018db8                DWHCIDeviceEnableRootPort
+                0x0000000000018ee0                DWHCIDeviceReset
+                0x0000000000018fe4                DWHCIDeviceEnableGlobalInterrupts
+                0x000000000001906c                DWHCIDeviceEnableCommonInterrupts
+                0x00000000000190e4                DWHCIDeviceEnableHostInterrupts
+                0x0000000000019184                DWHCIDeviceEnableChannelInterrupt
+                0x0000000000019228                DWHCIDeviceDisableChannelInterrupt
+                0x00000000000192d0                DWHCIDeviceFlushTxFIFO
+                0x00000000000193ac                DWHCIDeviceFlushRxFIFO
+                0x000000000001945c                DWHCIDeviceTransferStage
+                0x000000000001956c                DWHCIDeviceCompletionRoutine
+                0x00000000000195c8                DWHCIDeviceTransferStageAsync
+                0x00000000000197e4                DWHCIDeviceStartTransaction
+                0x0000000000019970                DWHCIDeviceStartChannel
+                0x0000000000019ef8                DWHCIDeviceChannelInterruptHandler
+                0x000000000001a658                DWHCIDeviceInterruptHandler
+                0x000000000001a828                DWHCIDeviceTimerHandler
+                0x000000000001a984                DWHCIDeviceAllocateChannel
+                0x000000000001aa4c                DWHCIDeviceFreeChannel
+                0x000000000001ab20                DWHCIDeviceWaitForBit
+                0x000000000001ac58                DWHCIDeviceGetPortSpeed
+                0x000000000001ad1c                DWHCIDeviceOvercurrentDetected
+                0x000000000001adb0                DWHCIDeviceDisableRootPort
+                0x000000000001ae38                DWHCIDeviceDumpRegister
+                0x000000000001aec0                DWHCIDeviceDumpStatus
+ .text          0x000000000001b15c      0x71c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+                0x000000000001b15c                DWHCIRegister
+                0x000000000001b1b8                DWHCIRegister2
+                0x000000000001b224                _DWHCIRegister
+                0x000000000001b270                DWHCIRegisterRead
+                0x000000000001b2d8                DWHCIRegisterWrite
+                0x000000000001b358                DWHCIRegisterGet
+                0x000000000001b3c8                DWHCIRegisterSet
+                0x000000000001b424                DWHCIRegisterIsSet
+                0x000000000001b4b0                DWHCIRegisterAnd
+                0x000000000001b534                DWHCIRegisterOr
+                0x000000000001b5b8                DWHCIRegisterClearBit
+                0x000000000001b66c                DWHCIRegisterSetBit
+                0x000000000001b71c                DWHCIRegisterClearAll
+                0x000000000001b774                DWHCIRegisterSetAll
+                0x000000000001b7cc                DWHCIRegisterDump
+ .text          0x000000000001b878     0x14b4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+                0x000000000001b878                DWHCITransferStageData
+                0x000000000001bdcc                _DWHCITransferStageData
+                0x000000000001beb0                DWHCITransferStageDataTransactionComplete
+                0x000000000001c0b8                DWHCITransferStageDataSetSplitComplete
+                0x000000000001c130                DWHCITransferStageDataSetState
+                0x000000000001c180                DWHCITransferStageDataGetState
+                0x000000000001c1c8                DWHCITransferStageDataSetSubState
+                0x000000000001c218                DWHCITransferStageDataGetSubState
+                0x000000000001c260                DWHCITransferStageDataBeginSplitCycle
+                0x000000000001c284                DWHCITransferStageDataGetChannelNumber
+                0x000000000001c2cc                DWHCITransferStageDataIsPeriodic
+                0x000000000001c370                DWHCITransferStageDataGetDeviceAddress
+                0x000000000001c3ec                DWHCITransferStageDataGetEndpointType
+                0x000000000001c4d0                DWHCITransferStageDataGetEndpointNumber
+                0x000000000001c54c                DWHCITransferStageDataGetMaxPacketSize
+                0x000000000001c594                DWHCITransferStageDataGetSpeed
+                0x000000000001c5dc                DWHCITransferStageDataGetPID
+                0x000000000001c6c8                DWHCITransferStageDataIsDirectionIn
+                0x000000000001c710                DWHCITransferStageDataIsStatusStage
+                0x000000000001c758                DWHCITransferStageDataGetDMAAddress
+                0x000000000001c7c8                DWHCITransferStageDataGetBytesToTransfer
+                0x000000000001c810                DWHCITransferStageDataGetPacketsToTransfer
+                0x000000000001c858                DWHCITransferStageDataIsSplit
+                0x000000000001c8a0                DWHCITransferStageDataIsSplitComplete
+                0x000000000001c910                DWHCITransferStageDataGetHubAddress
+                0x000000000001c9b4                DWHCITransferStageDataGetHubPortAddress
+                0x000000000001ca58                DWHCITransferStageDataGetSplitPosition
+                0x000000000001cac4                DWHCITransferStageDataGetStatusMask
+                0x000000000001cb40                DWHCITransferStageDataGetTransactionStatus
+                0x000000000001cbb0                DWHCITransferStageDataIsStageComplete
+                0x000000000001cc08                DWHCITransferStageDataGetResultLen
+                0x000000000001cc74                DWHCITransferStageDataGetURB
+                0x000000000001cce4                DWHCITransferStageDataGetFrameScheduler
+ .text          0x000000000001cd2c      0x5e8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+                0x000000000001cd2c                USBConfigurationParser
+                0x000000000001d068                _USBConfigurationParser
+                0x000000000001d0b4                USBConfigurationParserIsValid
+                0x000000000001d0fc                USBConfigurationParserGetDescriptor
+                0x000000000001d264                USBConfigurationParserError
+ .text          0x000000000001d314     0x1514 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+                0x000000000001d314                USBDevice
+                0x000000000001d4dc                USBDeviceCopy
+                0x000000000001d7f0                _USBDevice
+                0x000000000001d938                USBDeviceInitialize
+                0x000000000001e02c                USBDeviceConfigure
+                0x000000000001e134                USBDeviceGetName
+                0x000000000001e3c4                USBDeviceGetAddress
+                0x000000000001e40c                USBDeviceGetSpeed
+                0x000000000001e454                USBDeviceGetHubAddress
+                0x000000000001e49c                USBDeviceGetHubPortNumber
+                0x000000000001e4e4                USBDeviceGetEndpoint0
+                0x000000000001e554                USBDeviceGetHost
+                0x000000000001e5c4                USBDeviceGetDeviceDescriptor
+                0x000000000001e634                USBDeviceGetConfigurationDescriptor
+                0x000000000001e6a4                USBDeviceGetDescriptor
+                0x000000000001e730                USBDeviceConfigurationError
+                0x000000000001e7b0                USBDeviceSetAddress
+ .text          0x000000000001e828      0x414 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+                0x000000000001e828                USBDeviceFactoryGetDevice
+                0x000000000001e91c                GetDevice
+ .text          0x000000000001ec3c      0x94c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+                0x000000000001ec3c                USBEndpoint
+                0x000000000001ecfc                USBEndpoint2
+                0x000000000001ef80                USBEndpointCopy
+                0x000000000001f080                _USBEndpoint
+                0x000000000001f0cc                USBEndpointGetDevice
+                0x000000000001f13c                USBEndpointGetNumber
+                0x000000000001f184                USBEndpointGetType
+                0x000000000001f1cc                USBEndpointIsDirectionIn
+                0x000000000001f214                USBEndpointSetMaxPacketSize
+                0x000000000001f264                USBEndpointGetMaxPacketSize
+                0x000000000001f2ac                USBEndpointGetInterval
+                0x000000000001f31c                USBEndpointGetNextPID
+                0x000000000001f3a4                USBEndpointSkipPID
+                0x000000000001f514                USBEndpointResetPID
+ .text          0x000000000001f588      0x5dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+                0x000000000001f588                USBRequest
+                0x000000000001f6a0                _USBRequest
+                0x000000000001f710                USBRequestGetEndpoint
+                0x000000000001f780                USBRequestSetStatus
+                0x000000000001f7d0                USBRequestSetResultLen
+                0x000000000001f820                USBRequestGetStatus
+                0x000000000001f868                USBRequestGetResultLength
+                0x000000000001f8d8                USBRequestGetSetupData
+                0x000000000001f97c                USBRequestGetBuffer
+                0x000000000001f9fc                USBRequestGetBufLen
+                0x000000000001fa44                USBRequestSetCompletionRoutine
+                0x000000000001fadc                USBRequestCallCompletionRoutine
+ .text          0x000000000001fb64     0x13f8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+                0x000000000001fb64                USBStandardHub
+                0x000000000001fc2c                _USBStandardHub
+                0x000000000001fd7c                USBStandardHubInitialize
+                0x000000000001fdcc                USBStandardHubConfigure
+                0x0000000000020298                USBStandardHubEnumeratePorts
+                0x0000000000020df0                USBStandardHubGetDeviceNames
+ .text          0x0000000000020f5c      0x448 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+                0x0000000000020f5c                DeviceNameService
+                0x0000000000020fe4                _DeviceNameService
+                0x00000000000210d4                DeviceNameServiceAddDevice
+                0x0000000000021234                DeviceNameServiceGetDevice
+                0x000000000002135c                DeviceNameServiceGet
+ .text          0x00000000000213a4      0x568 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+                0x00000000000213a4                MACAddress
+                0x00000000000213f0                MACAddress2
+                0x0000000000021440                _MACAddress
+                0x000000000002148c                MACAddressIsEqual
+                0x0000000000021530                MACAddressSet
+                0x00000000000215bc                MACAddressSetBroadcast
+                0x0000000000021620                MACAddressGet
+                0x0000000000021690                MACAddressCopyTo
+                0x0000000000021738                MACAddressIsBroadcast
+                0x00000000000217ec                MACAddressGetSize
+                0x0000000000021810                MACAddressFormat
+ .text          0x000000000002190c      0xed8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+                0x000000000002190c                SMSC951xDevice
+                0x00000000000219d4                _SMSC951xDevice
+                0x0000000000021ac4                SMSC951xDeviceConfigure
+                0x0000000000022018                SMSC951xDeviceGetMACAddress
+                0x0000000000022060                SMSC951xDeviceSendFrame
+                0x00000000000221b0                SMSC951xDeviceReceiveFrame
+                0x000000000002240c                SMSC951xDeviceWriteReg
+                0x00000000000224b8                SMSC951xDeviceReadReg
+                0x0000000000022568                SMSC951xDeviceDumpReg
+                0x0000000000022614                SMSC951xDeviceDumpRegs
+ .text          0x00000000000227e4      0xfac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+                0x00000000000227e4                String
+                0x000000000002283c                String2
+                0x00000000000228cc                _String
+                0x0000000000022938                StringGet
+                0x000000000002299c                StringSet
+                0x0000000000022a54                StringGetLength
+                0x0000000000022ac0                StringAppend
+                0x0000000000022bdc                StringCompare
+                0x0000000000022c38                StringFind
+                0x0000000000022ce0                StringFormat
+                0x0000000000022d44                StringFormatV
+                0x000000000002341c                StringPutChar
+                0x00000000000234a8                StringPutString
+                0x0000000000023530                StringReserveSpace
+                0x0000000000023650                ntoa
+ .text          0x0000000000023790      0x548 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+                0x0000000000023790                uspi_memset
+                0x00000000000237f4                uspi_memcpy2
+                0x0000000000023868                uspi_memcmp
+                0x0000000000023914                uspi_strlen
+                0x0000000000023968                uspi_strcmp
+                0x0000000000023a4c                uspi_strcpy
+                0x0000000000023abc                uspi_strncpy
+                0x0000000000023b5c                uspi_strcat
+                0x0000000000023bec                uspi_char2int
+                0x0000000000023c38                uspi_le2be16
+                0x0000000000023c84                uspi_le2be32
+ .text          0x0000000000023cd8     0x132c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+                0x0000000000023cd8                USBBulkOnlyMassStorageDevice
+                0x0000000000023d7c                _USBBulkOnlyMassStorageDevice
+                0x0000000000023e40                USBBulkOnlyMassStorageDeviceConfigure
+                0x0000000000024528                USBBulkOnlyMassStorageDeviceRead
+                0x00000000000245e8                USBBulkOnlyMassStorageDeviceWrite
+                0x00000000000246a8                USBBulkOnlyMassStorageDeviceSeek
+                0x0000000000024704                USBBulkOnlyMassStorageDeviceGetCapacity
+                0x000000000002474c                USBBulkOnlyMassStorageDeviceTryRead
+                0x0000000000024914                USBBulkOnlyMassStorageDeviceTryWrite
+                0x0000000000024ad8                USBBulkOnlyMassStorageDeviceCommand
+                0x0000000000024e28                USBBulkOnlyMassStorageDeviceReset
+ .text          0x0000000000025004      0x430 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+                0x0000000000025004                DWHCIFrameSchedulerNonPeriodic
+                0x00000000000250b8                _DWHCIFrameSchedulerNonPeriodic
+                0x000000000002510c                DWHCIFrameSchedulerNonPeriodicStartSplit
+                0x0000000000025160                DWHCIFrameSchedulerNonPeriodicCompleteSplit
+                0x0000000000025238                DWHCIFrameSchedulerNonPeriodicTransactionComplete
+                0x00000000000253f0                DWHCIFrameSchedulerNonPeriodicWaitForFrame
+                0x0000000000025410                DWHCIFrameSchedulerNonPeriodicIsOddFrame
+ .text          0x0000000000025434      0x568 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+                0x0000000000025434                DWHCIFrameSchedulerPeriodic
+                0x00000000000254f4                _DWHCIFrameSchedulerPeriodic
+                0x0000000000025548                DWHCIFrameSchedulerPeriodicStartSplit
+                0x00000000000255a8                DWHCIFrameSchedulerPeriodicCompleteSplit
+                0x00000000000256c0                DWHCIFrameSchedulerPeriodicTransactionComplete
+                0x0000000000025854                DWHCIFrameSchedulerPeriodicWaitForFrame
+                0x0000000000025938                DWHCIFrameSchedulerPeriodicIsOddFrame
+ .text          0x000000000002599c      0x690 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+                0x000000000002599c                KeyMap
+                0x0000000000025a18                _KeyMap
+                0x0000000000025a38                KeyMapClearTable
+                0x0000000000025ae0                KeyMapSetEntry
+                0x0000000000025ba4                KeyMapTranslate
+                0x0000000000025dec                KeyMapGetString
+                0x0000000000025f8c                KeyMapGetLEDStatus
+ .text          0x000000000002602c      0xd50 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+                0x000000000002602c                USBKeyboardDevice
+                0x000000000002614c                _CUSBKeyboardDevice
+                0x0000000000026210                USBKeyboardDeviceConfigure
+                0x00000000000265f8                USBKeyboardDeviceRegisterKeyPressedHandler
+                0x000000000002666c                USBKeyboardDeviceRegisterSelectConsoleHandler
+                0x00000000000266e0                USBKeyboardDeviceRegisterShutdownHandler
+                0x0000000000026754                USBKeyboardDeviceRegisterKeyStatusHandlerRaw
+ .text          0x0000000000026d7c      0x4a4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+                0x0000000000026d7c                DWHCIRootPort
+                0x0000000000026e00                _DWHCIRootPort
+                0x0000000000026e88                DWHCIRootPortInitialize
+ .text          0x0000000000027220      0x8e4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+                0x0000000000027220                USBMouseDevice
+                0x00000000000272f4                _CUSBMouseDevice
+                0x00000000000273a8                USBMouseDeviceConfigure
+                0x0000000000027790                USBMouseDeviceRegisterStatusHandler
+ .text          0x0000000000027b04      0x2ac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+                0x0000000000027b04                DWHCIFrameSchedulerNoSplit
+                0x0000000000027bc8                _DWHCIFrameSchedulerNoSplit
+                0x0000000000027be8                DWHCIFrameSchedulerNoSplitStartSplit
+                0x0000000000027c1c                DWHCIFrameSchedulerNoSplitCompleteSplit
+                0x0000000000027c54                DWHCIFrameSchedulerNoSplitTransactionComplete
+                0x0000000000027c8c                DWHCIFrameSchedulerNoSplitWaitForFrame
+                0x0000000000027d4c                DWHCIFrameSchedulerNoSplitIsOddFrame
+ .text          0x0000000000027db0     0x1764 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+                0x0000000000027db0                USBGamePadDevice
+                0x0000000000027f94                _CUSBGamePadDevice
+                0x00000000000289f8                USBGamePadDeviceConfigure
+                0x0000000000028ffc                USBGamePadDeviceRegisterStatusHandler
+                0x0000000000029328                USBGamePadDeviceGetReport
+ .text          0x0000000000029514      0x12c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+                0x0000000000029514                uspi_EnterCritical
+                0x000000000002958c                uspi_LeaveCritical
+                0x0000000000029610                uspi_CleanAndInvalidateDataCacheRange
+ .text          0x0000000000029640      0xc10 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+                0x0000000000029640                USBString
+                0x0000000000029714                USBStringCopy
+                0x00000000000298a8                _USBString
+                0x0000000000029974                USBStringGetFromDescriptor
+                0x0000000000029eac                USBStringGet
+                0x0000000000029f00                USBStringGetLanguageID
+ .text          0x000000000002a250      0xd54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+                0x000000000002a250                eARPProcessPacket
+                0x000000000002a5f4                vARPRefreshCacheEntry
+                0x000000000002a970                eARPGetCacheEntry
+                0x000000000002abc4                vARPAgeCache
+                0x000000000002adb8                vARPSendGratuitous
+                0x000000000002ade0                FreeRTOS_OutputARPRequest
+                0x000000000002ae38                vARPGenerateRequestPacket
+                0x000000000002af80                FreeRTOS_ClearARP
+ .text          0x000000000002afa4        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .text          0x000000000002afa4      0x89c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+                0x000000000002aff0                FreeRTOS_gethostbyname
+                0x000000000002b454                ulDNSHandlePacket
+ .text          0x000000000002b840     0x1ee0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+                0x000000000002ba44                xIsCallingFromIPTask
+                0x000000000002be3c                FreeRTOS_NetworkDown
+                0x000000000002be9c                FreeRTOS_NetworkDownFromISR
+                0x000000000002bf10                FreeRTOS_GetUDPPayloadBuffer
+                0x000000000002bf88                pxDuplicateNetworkBufferWithDescriptor
+                0x000000000002c01c                pxPacketBuffer_to_NetworkBuffer
+                0x000000000002c094                pxUDPPayloadBuffer_to_NetworkBuffer
+                0x000000000002c10c                FreeRTOS_ReleaseUDPPayloadBuffer
+                0x000000000002c13c                FreeRTOS_IPInit
+                0x000000000002c3f8                FreeRTOS_GetAddressConfiguration
+                0x000000000002c4a4                FreeRTOS_SetAddressConfiguration
+                0x000000000002c550                xSendEventToIPTask
+                0x000000000002c59c                xSendEventStructToIPTask
+                0x000000000002c714                eConsiderFrameForProcessing
+                0x000000000002c84c                vIPNetworkUpCalls
+                0x000000000002cf4c                usGenerateProtocolChecksum
+                0x000000000002d1a8                usGenerateChecksum
+                0x000000000002d4ec                vReturnEthernetFrame
+                0x000000000002d598                FreeRTOS_GetIPAddress
+                0x000000000002d5bc                FreeRTOS_SetIPAddress
+                0x000000000002d5ec                FreeRTOS_GetGatewayAddress
+                0x000000000002d610                FreeRTOS_GetDNSServerAddress
+                0x000000000002d634                FreeRTOS_GetNetmask
+                0x000000000002d658                FreeRTOS_GetMACAddress
+                0x000000000002d678                FreeRTOS_SetNetmask
+                0x000000000002d6a8                FreeRTOS_SetGatewayAddress
+                0x000000000002d6d8                xIPIsNetworkTaskReady
+                0x000000000002d6fc                FreeRTOS_IsNetworkUp
+ .text          0x000000000002d720     0x3558 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+                0x000000000002db30                vNetworkSocketsInit
+                0x000000000002dcb8                FreeRTOS_socket
+                0x000000000002dea4                FreeRTOS_recvfrom
+                0x000000000002e0d4                FreeRTOS_sendto
+                0x000000000002e2c4                FreeRTOS_bind
+                0x000000000002e424                vSocketBind
+                0x000000000002e5e0                FreeRTOS_closesocket
+                0x000000000002e674                vSocketClose
+                0x000000000002e898                FreeRTOS_setsockopt
+                0x000000000002ef90                pxUDPSocketLookup
+                0x000000000002efe8                FreeRTOS_inet_addr
+                0x000000000002f1ac                FreeRTOS_GetLocalAddress
+                0x000000000002f228                vWakeUpSocketUser
+                0x000000000002f4ac                FreeRTOS_connect
+                0x000000000002f5c8                FreeRTOS_accept
+                0x000000000002f88c                FreeRTOS_recv
+                0x000000000002fc54                FreeRTOS_get_tx_head
+                0x000000000002fd08                FreeRTOS_send
+                0x000000000002ffb8                FreeRTOS_listen
+                0x0000000000030118                FreeRTOS_shutdown
+                0x00000000000301b4                xTCPTimerCheck
+                0x000000000003035c                pxTCPSocketLookup
+                0x0000000000030460                FreeRTOS_get_rx_buf
+                0x0000000000030610                lTCPAddRxdata
+                0x0000000000030728                FreeRTOS_outstanding
+                0x00000000000307a0                FreeRTOS_recvcount
+                0x0000000000030818                FreeRTOS_GetRemoteAddress
+                0x00000000000308f0                FreeRTOS_maywrite
+                0x00000000000309b4                FreeRTOS_tx_space
+                0x0000000000030a30                FreeRTOS_tx_size
+                0x0000000000030aa8                FreeRTOS_issocketconnected
+                0x0000000000030b20                FreeRTOS_mss
+                0x0000000000030b74                FreeRTOS_connstatus
+                0x0000000000030bc8                FreeRTOS_rx_size
+                0x0000000000030c40                FreeRTOS_netstat
+ .text          0x0000000000030c78      0x5dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+                0x0000000000030ed0                uxStreamBufferAdd
+                0x00000000000310a4                uxStreamBufferGet
+ .text          0x0000000000031254     0x4704 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+                0x0000000000031664                xTCPSocketCheck
+                0x0000000000032ba0                vTCPStateChange
+                0x0000000000034dec                xProcessReceivedTCPPacket
+                0x0000000000035854                xTCPCheckNewClient
+ .text          0x0000000000035958     0x1de0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+                0x0000000000035b54                vListInsertGeneric
+                0x0000000000035ed4                xTCPWindowRxEmpty
+                0x00000000000360b8                vTCPWindowDestroy
+                0x000000000003615c                vTCPWindowCreate
+                0x0000000000036238                vTCPWindowInit
+                0x00000000000364e0                lTCPWindowRxCheck
+                0x00000000000368e4                lTCPWindowTxAdd
+                0x0000000000036bec                xTCPWindowTxDone
+                0x0000000000036d30                xTCPWindowTxHasData
+                0x0000000000036e94                ulTCPWindowTxGet
+                0x0000000000037628                ulTCPWindowTxAck
+                0x0000000000037690                ulTCPWindowTxSack
+ .text          0x0000000000037738      0x618 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+                0x0000000000037738                vProcessGeneratedUDPPacket
+                0x0000000000037ba8                xProcessReceivedUDPPacket
+ .text          0x0000000000037d50      0x458 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+                0x0000000000037d50                xNetworkBuffersInitialise
+                0x0000000000037ebc                pucGetNetworkBuffer
+                0x0000000000037f28                vReleaseNetworkBuffer
+                0x0000000000037f64                pxGetNetworkBufferWithDescriptor
+                0x00000000000380b4                vReleaseNetworkBufferAndDescriptor
+                0x0000000000038160                uxGetNumberOfFreeNetworkBuffers
+                0x0000000000038184                uxGetMinimumFreeNetworkBuffers
+ .text          0x00000000000381a8      0x394 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+                0x00000000000381a8                ethernetPollTask
+                0x0000000000038444                xNetworkInterfaceInitialise
+                0x00000000000384ec                xNetworkInterfaceOutput
+ .text          0x000000000003853c      0x114 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+                0x000000000003853c                __udivsi3
+                0x000000000003853c                __aeabi_uidiv
+                0x0000000000038630                __aeabi_uidivmod
+ .text          0x0000000000038650        0x4 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+                0x0000000000038650                __aeabi_ldiv0
+                0x0000000000038650                __aeabi_idiv0
 
-.rodata         0x0000000000038d9c     0x2c11
- .rodata        0x0000000000038d9c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
- .rodata        0x0000000000038da0        0x5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
- *fill*         0x0000000000038da5        0x3 
- .rodata        0x0000000000038da8        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
- .rodata        0x0000000000038dac        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
-                0x0000000000038dac                pRegs
- .rodata        0x0000000000038db0        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .rodata        0x0000000000038db8      0x1b8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .rodata        0x0000000000038f70      0x25a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
-                0x0000000000038f70                font
- *fill*         0x00000000000391ca        0x2 
- .rodata        0x00000000000391cc       0x3d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- *fill*         0x0000000000039209        0x3 
- .rodata        0x000000000003920c      0x16b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- *fill*         0x0000000000039377        0x1 
- .rodata        0x0000000000039378        0x6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- *fill*         0x000000000003937e        0x2 
- .rodata        0x0000000000039380       0xd9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- *fill*         0x0000000000039459        0x3 
- .rodata        0x000000000003945c      0x215 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- *fill*         0x0000000000039671        0x3 
- .rodata        0x0000000000039674       0xef /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- *fill*         0x0000000000039763        0x1 
- .rodata        0x0000000000039764      0x33d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- *fill*         0x0000000000039aa1        0x3 
- .rodata        0x0000000000039aa4       0xf3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- *fill*         0x0000000000039b97        0x1 
- .rodata        0x0000000000039b98      0x1ce /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- *fill*         0x0000000000039d66        0x2 
- .rodata        0x0000000000039d68      0x139 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- *fill*         0x0000000000039ea1        0x3 
- .rodata        0x0000000000039ea4      0x3c3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- *fill*         0x000000000003a267        0x1 
- .rodata        0x000000000003a268       0xf1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- *fill*         0x000000000003a359        0x3 
- .rodata        0x000000000003a35c       0xbe /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- *fill*         0x000000000003a41a        0x2 
- .rodata        0x000000000003a41c      0x2c2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- *fill*         0x000000000003a6de        0x2 
- .rodata        0x000000000003a6e0       0x5d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- *fill*         0x000000000003a73d        0x3 
- .rodata        0x000000000003a740      0x2fc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .rodata        0x000000000003aa3c       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .rodata        0x000000000003aae8       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .rodata        0x000000000003ab94      0x2bb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- *fill*         0x000000000003ae4f        0x1 
- .rodata        0x000000000003ae50      0x1de /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- *fill*         0x000000000003b02e        0x2 
- .rodata        0x000000000003b030      0x143 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- *fill*         0x000000000003b173        0x1 
- .rodata        0x000000000003b174      0x17a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- *fill*         0x000000000003b2ee        0x2 
- .rodata        0x000000000003b2f0       0x6e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- *fill*         0x000000000003b35e        0x2 
- .rodata        0x000000000003b360      0x19e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- *fill*         0x000000000003b4fe        0x2 
- .rodata        0x000000000003b500      0x195 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- *fill*         0x000000000003b695        0x3 
- .rodata        0x000000000003b698       0x26 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- *fill*         0x000000000003b6be        0x2 
- .rodata        0x000000000003b6c0        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .rodata        0x000000000003b6cc       0xbc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
-                0x000000000003b6cc                xBroadcastMACAddress
- .rodata        0x000000000003b788       0xe7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- *fill*         0x000000000003b86f        0x1 
- .rodata        0x000000000003b870       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .rodata        0x000000000003b948        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
-                0x000000000003b948                xBufferAllocFixedSize
- .rodata        0x000000000003b94c       0x61 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+.rodata         0x0000000000038654     0x2a81
+ .rodata        0x0000000000038654        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .rodata        0x0000000000038658        0x5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
+ *fill*         0x000000000003865d        0x3 
+ .rodata        0x0000000000038660        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
+ .rodata        0x0000000000038664        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
+                0x0000000000038664                pRegs
+ .rodata        0x0000000000038668        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .rodata        0x0000000000038670       0x26 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ *fill*         0x0000000000038696        0x2 
+ .rodata        0x0000000000038698      0x25a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+                0x0000000000038698                font
+ *fill*         0x00000000000388f2        0x2 
+ .rodata        0x00000000000388f4       0x3d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ *fill*         0x0000000000038931        0x3 
+ .rodata        0x0000000000038934      0x16b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ *fill*         0x0000000000038a9f        0x1 
+ .rodata        0x0000000000038aa0        0x6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ *fill*         0x0000000000038aa6        0x2 
+ .rodata        0x0000000000038aa8       0xd9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ *fill*         0x0000000000038b81        0x3 
+ .rodata        0x0000000000038b84      0x215 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ *fill*         0x0000000000038d99        0x3 
+ .rodata        0x0000000000038d9c       0xef /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ *fill*         0x0000000000038e8b        0x1 
+ .rodata        0x0000000000038e8c      0x33d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ *fill*         0x00000000000391c9        0x3 
+ .rodata        0x00000000000391cc       0xf3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ *fill*         0x00000000000392bf        0x1 
+ .rodata        0x00000000000392c0      0x1ce /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ *fill*         0x000000000003948e        0x2 
+ .rodata        0x0000000000039490      0x139 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ *fill*         0x00000000000395c9        0x3 
+ .rodata        0x00000000000395cc      0x3c3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ *fill*         0x000000000003998f        0x1 
+ .rodata        0x0000000000039990       0xf1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ *fill*         0x0000000000039a81        0x3 
+ .rodata        0x0000000000039a84       0xbe /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ *fill*         0x0000000000039b42        0x2 
+ .rodata        0x0000000000039b44      0x2c2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ *fill*         0x0000000000039e06        0x2 
+ .rodata        0x0000000000039e08       0x5d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ *fill*         0x0000000000039e65        0x3 
+ .rodata        0x0000000000039e68      0x2fc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .rodata        0x000000000003a164       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .rodata        0x000000000003a210       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .rodata        0x000000000003a2bc      0x2bb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ *fill*         0x000000000003a577        0x1 
+ .rodata        0x000000000003a578      0x1de /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ *fill*         0x000000000003a756        0x2 
+ .rodata        0x000000000003a758      0x143 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ *fill*         0x000000000003a89b        0x1 
+ .rodata        0x000000000003a89c      0x17a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ *fill*         0x000000000003aa16        0x2 
+ .rodata        0x000000000003aa18       0x6e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ *fill*         0x000000000003aa86        0x2 
+ .rodata        0x000000000003aa88      0x19e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ *fill*         0x000000000003ac26        0x2 
+ .rodata        0x000000000003ac28      0x195 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ *fill*         0x000000000003adbd        0x3 
+ .rodata        0x000000000003adc0       0x26 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ *fill*         0x000000000003ade6        0x2 
+ .rodata        0x000000000003ade8        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .rodata        0x000000000003adf4       0xbc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+                0x000000000003adf4                xBroadcastMACAddress
+ .rodata        0x000000000003aeb0       0xe7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ *fill*         0x000000000003af97        0x1 
+ .rodata        0x000000000003af98       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .rodata        0x000000000003b070        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+                0x000000000003b070                xBufferAllocFixedSize
+ .rodata        0x000000000003b074       0x61 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
 
-.rodata.str1.4  0x000000000003b9b0      0x674
+.rodata.str1.4  0x000000000003b0d8      0x674
  .rodata.str1.4
-                0x000000000003b9b0      0x606 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+                0x000000000003b0d8      0x606 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
                                         0x60a (size before relaxing)
- *fill*         0x000000000003bfb6        0x2 
+ *fill*         0x000000000003b6de        0x2 
  .rodata.str1.4
-                0x000000000003bfb8       0x6c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+                0x000000000003b6e0       0x6c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
                                          0x69 (size before relaxing)
 
-.glue_7         0x000000000003c024        0x0
- .glue_7        0x000000000003c024        0x0 linker stubs
+.glue_7         0x000000000003b74c        0x0
+ .glue_7        0x000000000003b74c        0x0 linker stubs
 
-.glue_7t        0x000000000003c024        0x0
- .glue_7t       0x000000000003c024        0x0 linker stubs
+.glue_7t        0x000000000003b74c        0x0
+ .glue_7t       0x000000000003b74c        0x0 linker stubs
 
-.vfp11_veneer   0x000000000003c024        0x0
- .vfp11_veneer  0x000000000003c024        0x0 linker stubs
+.vfp11_veneer   0x000000000003b74c        0x0
+ .vfp11_veneer  0x000000000003b74c        0x0 linker stubs
 
-.v4_bx          0x000000000003c024        0x0
- .v4_bx         0x000000000003c024        0x0 linker stubs
+.v4_bx          0x000000000003b74c        0x0
+ .v4_bx         0x000000000003b74c        0x0 linker stubs
 
-.iplt           0x000000000003c024        0x0
- .iplt          0x000000000003c024        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+.iplt           0x000000000003b74c        0x0
+ .iplt          0x000000000003b74c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
 
-.rel.dyn        0x000000000003c024        0x0
- .rel.iplt      0x000000000003c024        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+.rel.dyn        0x000000000003b74c        0x0
+ .rel.iplt      0x000000000003b74c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
 
-.data           0x000000000003c024      0x14c
+.data           0x000000000003b74c      0x14c
  *(.data)
- .data          0x000000000003c024        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
- .data          0x000000000003c024        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
-                0x000000000003c024                ulCriticalNesting
- .data          0x000000000003c028        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
- .data          0x000000000003c028        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/list.o
- .data          0x000000000003c028        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/queue.o
- .data          0x000000000003c028        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
- .data          0x000000000003c02c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/event_groups.o
- .data          0x000000000003c02c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
- .data          0x000000000003c02c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
- .data          0x000000000003c02c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .data          0x000000000003c030        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/startup.o
- .data          0x000000000003c030        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .data          0x000000000003c030        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .data          0x000000000003c030        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
- .data          0x000000000003c030        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
-                0x000000000003c030                next
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .data          0x000000000003c034        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .data          0x000000000003c034        0x1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .data          0x000000000003c035        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- *fill*         0x000000000003c035        0x3 
- .data          0x000000000003c038        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .data          0x000000000003c03c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .data          0x000000000003c03c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .data          0x000000000003c03c       0xcc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .data          0x000000000003c108        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .data          0x000000000003c10c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .data          0x000000000003c10c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .data          0x000000000003c110        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .data          0x000000000003c110       0x39 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .data          0x000000000003c149        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
- *fill*         0x000000000003c149        0x3 
- .data          0x000000000003c14c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .data          0x000000000003c150        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .data          0x000000000003c150        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .data          0x000000000003c150        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
- .data          0x000000000003c150       0x18 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
-                0x000000000003c150                xDefaultPartUDPPacketHeader
- .data          0x000000000003c168        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .data          0x000000000003c168        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
- .data          0x000000000003c170        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
- .data          0x000000000003c170        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+ .data          0x000000000003b74c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .data          0x000000000003b74c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x000000000003b74c                ulCriticalNesting
+ .data          0x000000000003b750        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
+ .data          0x000000000003b750        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/list.o
+ .data          0x000000000003b750        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/queue.o
+ .data          0x000000000003b750        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
+ .data          0x000000000003b754        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/event_groups.o
+ .data          0x000000000003b754        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
+ .data          0x000000000003b754        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
+ .data          0x000000000003b754        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .data          0x000000000003b758        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/startup.o
+ .data          0x000000000003b758        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .data          0x000000000003b758        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .data          0x000000000003b758        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .data          0x000000000003b758        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+                0x000000000003b758                next
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .data          0x000000000003b75c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .data          0x000000000003b75c        0x1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .data          0x000000000003b75d        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ *fill*         0x000000000003b75d        0x3 
+ .data          0x000000000003b760        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .data          0x000000000003b764        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .data          0x000000000003b764        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .data          0x000000000003b764       0xcc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .data          0x000000000003b830        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .data          0x000000000003b834        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .data          0x000000000003b834        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .data          0x000000000003b838        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .data          0x000000000003b838       0x39 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .data          0x000000000003b871        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ *fill*         0x000000000003b871        0x3 
+ .data          0x000000000003b874        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .data          0x000000000003b878        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .data          0x000000000003b878        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .data          0x000000000003b878        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .data          0x000000000003b878       0x18 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+                0x000000000003b878                xDefaultPartUDPPacketHeader
+ .data          0x000000000003b890        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .data          0x000000000003b890        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .data          0x000000000003b898        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .data          0x000000000003b898        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
-.igot.plt       0x000000000003c170        0x0
- .igot.plt      0x000000000003c170        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+.igot.plt       0x000000000003b898        0x0
+ .igot.plt      0x000000000003b898        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
 
-.bss            0x000000000003c170    0x1ec30
-                0x000000000003c170                __bss_start = .
+.bss            0x000000000003b8a0    0x1ec30
+                0x000000000003b8a0                __bss_start = .
  *(.bss)
- .bss           0x000000000003c170        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
- .bss           0x000000000003c170        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
-                0x000000000003c170                g_bStarted
- .bss           0x000000000003c174       0x80 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
-                0x000000000003c1e0                pxCurrentCoRoutine
- .bss           0x000000000003c1f4        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/list.o
- .bss           0x000000000003c1f4        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/queue.o
- .bss           0x000000000003c1f4      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
-                0x000000000003c1f4                pxCurrentTCB
- .bss           0x000000000003c2f4        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/event_groups.o
- .bss           0x000000000003c2f4      0x240 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
- .bss           0x000000000003c534        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
- *fill*         0x000000000003c534        0x4 
- .bss           0x000000000003c538    0x1e010 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
-                0x000000000005a544                allocated
- .bss           0x000000000005a548        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/startup.o
- .bss           0x000000000005a548        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .bss           0x000000000005a548        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .bss           0x000000000005a548        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
-                0x000000000005a548                depth
- .bss           0x000000000005a54c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
- .bss           0x000000000005a54c        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
-                0x000000000005a54c                loaded
-                0x000000000005a550                position_x
-                0x000000000005a554                position_y
- .bss           0x000000000005a558        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .bss           0x000000000005a558        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .bss           0x000000000005a55c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .bss           0x000000000005a55c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .bss           0x000000000005a560        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .bss           0x000000000005a560        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .bss           0x000000000005a564        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .bss           0x000000000005a564        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .bss           0x000000000005a56c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .bss           0x000000000005a56c       0x7c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .bss           0x000000000005a5e8        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .bss           0x000000000005a5e8        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .bss           0x000000000005a5f4       0x74 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
-                0x000000000005a5f4                xNetworkEventQueue
-                0x000000000005a5f8                uxRxEventCount
-                0x000000000005a5fc                usPacketIdentifier
-                0x000000000005a600                xNetworkAddressing
-                0x000000000005a614                xDefaultAddressing
- .bss           0x000000000005a668        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .bss           0x000000000005a66c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .bss           0x000000000005a66c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
-                0x000000000005a66c                ulNextInitialSequenceNumber
- .bss           0x000000000005a670       0x1c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
-                0x000000000005a688                xTCPWindowLoggingLevel
- .bss           0x000000000005a68c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
- .bss           0x000000000005a68c      0x670 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .bss           0x000000000005acfc        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
-                0x000000000005acfc                xOutputQueue
- .bss           0x000000000005ad04        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
- .bss           0x000000000005ad04        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+ .bss           0x000000000003b8a0        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
+ .bss           0x000000000003b8a0        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x000000000003b8a0                g_bStarted
+ .bss           0x000000000003b8a4       0x80 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
+                0x000000000003b910                pxCurrentCoRoutine
+ .bss           0x000000000003b924        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/list.o
+ .bss           0x000000000003b924        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/queue.o
+ .bss           0x000000000003b924      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/tasks.o
+                0x000000000003b924                pxCurrentTCB
+ .bss           0x000000000003ba24        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/event_groups.o
+ .bss           0x000000000003ba24      0x240 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
+ .bss           0x000000000003bc64        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
+ *fill*         0x000000000003bc64        0x4 
+ .bss           0x000000000003bc68    0x1e010 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
+                0x0000000000059c74                allocated
+ .bss           0x0000000000059c78        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/startup.o
+ .bss           0x0000000000059c78        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .bss           0x0000000000059c78        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .bss           0x0000000000059c78        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+                0x0000000000059c78                depth
+ .bss           0x0000000000059c7c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .bss           0x0000000000059c7c        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+                0x0000000000059c7c                loaded
+                0x0000000000059c80                position_x
+                0x0000000000059c84                position_y
+ .bss           0x0000000000059c88        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .bss           0x0000000000059c88        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .bss           0x0000000000059c8c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .bss           0x0000000000059c8c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .bss           0x0000000000059c90        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .bss           0x0000000000059c90        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .bss           0x0000000000059c94        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .bss           0x0000000000059c94        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .bss           0x0000000000059c9c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .bss           0x0000000000059c9c       0x7c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .bss           0x0000000000059d18        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .bss           0x0000000000059d18        0xc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .bss           0x0000000000059d24       0x74 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+                0x0000000000059d24                xNetworkEventQueue
+                0x0000000000059d28                uxRxEventCount
+                0x0000000000059d2c                usPacketIdentifier
+                0x0000000000059d30                xNetworkAddressing
+                0x0000000000059d44                xDefaultAddressing
+ .bss           0x0000000000059d98        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .bss           0x0000000000059d9c        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .bss           0x0000000000059d9c        0x4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+                0x0000000000059d9c                ulNextInitialSequenceNumber
+ .bss           0x0000000000059da0       0x1c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+                0x0000000000059db8                xTCPWindowLoggingLevel
+ .bss           0x0000000000059dbc        0x0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .bss           0x0000000000059dbc      0x670 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .bss           0x000000000005a42c        0x8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+                0x000000000005a42c                xOutputQueue
+ .bss           0x000000000005a434        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .bss           0x000000000005a434        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
  *(.bss.*)
-                0x000000000005ad04                __bss_end = .
- COMMON         0x000000000005ad04        0x1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
-                0x000000000005ad04                s_bWereEnabled
- *fill*         0x000000000005ad05        0xb 
- COMMON         0x000000000005ad10       0x68 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
-                0x000000000005ad10                SCREEN_WIDTH
-                0x000000000005ad14                SCREEN_HEIGHT
-                0x000000000005ad18                framebuffer
-                0x000000000005ad20                mailbuffer
- COMMON         0x000000000005ad78       0x28 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
-                0x000000000005ad78                xBoundUdpSocketsList
-                0x000000000005ad8c                xBoundTcpSocketsList
+                0x000000000005a434                __bss_end = .
+ COMMON         0x000000000005a434        0x1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
+                0x000000000005a434                s_bWereEnabled
+ *fill*         0x000000000005a435        0xb 
+ COMMON         0x000000000005a440       0x68 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+                0x000000000005a440                SCREEN_WIDTH
+                0x000000000005a444                SCREEN_HEIGHT
+                0x000000000005a448                framebuffer
+                0x000000000005a450                mailbuffer
+ COMMON         0x000000000005a4a8       0x28 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+                0x000000000005a4a8                xBoundUdpSocketsList
+                0x000000000005a4bc                xBoundTcpSocketsList
                 0x0000000008010000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
 LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a
 LOAD /usr/lib/arm-none-eabi/lib/libc.a
 OUTPUT(kernel.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x27feb
+.debug_info     0x0000000000000000    0x27553
  .debug_info    0x0000000000000000      0x1f1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
  .debug_info    0x00000000000001f1      0x1b5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
  .debug_info    0x00000000000003a6      0x452 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
@@ -947,53 +944,53 @@ OUTPUT(kernel.elf elf32-littlearm)
  .debug_info    0x000000000000477f      0x31d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
  .debug_info    0x0000000000004a9c      0x3fe /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
  .debug_info    0x0000000000004e9a      0xacf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x0000000000005969     0x15d4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .debug_info    0x0000000000006f3d       0xa8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .debug_info    0x0000000000006fe5      0x157 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
- .debug_info    0x000000000000713c      0x2d9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
- .debug_info    0x0000000000007415      0x3d1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
- .debug_info    0x00000000000077e6      0x3f3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .debug_info    0x0000000000007bd9     0x1560 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .debug_info    0x0000000000009139     0x1797 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .debug_info    0x000000000000a8d0      0x35b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .debug_info    0x000000000000ac2b      0xfd3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .debug_info    0x000000000000bbfe      0x447 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .debug_info    0x000000000000c045      0xe23 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .debug_info    0x000000000000ce68     0x10dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .debug_info    0x000000000000df44      0x8ea /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .debug_info    0x000000000000e82e      0x971 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .debug_info    0x000000000000f19f      0xe57 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .debug_info    0x000000000000fff6      0x22d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .debug_info    0x0000000000010223      0x32e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .debug_info    0x0000000000010551      0xdcf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .debug_info    0x0000000000011320      0x575 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .debug_info    0x0000000000011895      0x377 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- .debug_info    0x0000000000011c0c     0x1448 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .debug_info    0x0000000000013054      0x2fa /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .debug_info    0x000000000001334e      0x36c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .debug_info    0x00000000000136ba      0x4fe /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .debug_info    0x0000000000013bb8     0x1068 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .debug_info    0x0000000000014c20      0xa5a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .debug_info    0x000000000001567a      0xbdd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .debug_info    0x0000000000016257      0x2f1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .debug_info    0x0000000000016548     0x10db /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .debug_info    0x0000000000017623      0x104 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .debug_info    0x0000000000017727      0xb95 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .debug_info    0x00000000000182bc      0xfdf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .debug_info    0x000000000001929b      0xa99 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .debug_info    0x0000000000019d34      0xf55 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .debug_info    0x000000000001ac89     0x2544 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
- .debug_info    0x000000000001d1cd     0x2ad5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .debug_info    0x000000000001fca2      0xdc3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .debug_info    0x0000000000020a65     0x2975 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .debug_info    0x00000000000233da     0x1ae0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
- .debug_info    0x0000000000024eba     0x14ff /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
- .debug_info    0x00000000000263b9      0xced /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .debug_info    0x00000000000270a6      0xde9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
- .debug_info    0x0000000000027e8f       0xae /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
- .debug_info    0x0000000000027f3d       0xae /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0000000000005969      0xb3c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .debug_info    0x00000000000064a5       0xa8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .debug_info    0x000000000000654d      0x157 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .debug_info    0x00000000000066a4      0x2d9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .debug_info    0x000000000000697d      0x3d1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .debug_info    0x0000000000006d4e      0x3f3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .debug_info    0x0000000000007141     0x1560 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .debug_info    0x00000000000086a1     0x1797 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .debug_info    0x0000000000009e38      0x35b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .debug_info    0x000000000000a193      0xfd3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .debug_info    0x000000000000b166      0x447 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .debug_info    0x000000000000b5ad      0xe23 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .debug_info    0x000000000000c3d0     0x10dc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .debug_info    0x000000000000d4ac      0x8ea /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .debug_info    0x000000000000dd96      0x971 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .debug_info    0x000000000000e707      0xe57 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .debug_info    0x000000000000f55e      0x22d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .debug_info    0x000000000000f78b      0x32e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .debug_info    0x000000000000fab9      0xdcf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .debug_info    0x0000000000010888      0x575 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .debug_info    0x0000000000010dfd      0x377 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .debug_info    0x0000000000011174     0x1448 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .debug_info    0x00000000000125bc      0x2fa /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .debug_info    0x00000000000128b6      0x36c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .debug_info    0x0000000000012c22      0x4fe /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .debug_info    0x0000000000013120     0x1068 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .debug_info    0x0000000000014188      0xa5a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .debug_info    0x0000000000014be2      0xbdd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .debug_info    0x00000000000157bf      0x2f1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .debug_info    0x0000000000015ab0     0x10db /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .debug_info    0x0000000000016b8b      0x104 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .debug_info    0x0000000000016c8f      0xb95 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .debug_info    0x0000000000017824      0xfdf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .debug_info    0x0000000000018803      0xa99 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .debug_info    0x000000000001929c      0xf55 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .debug_info    0x000000000001a1f1     0x2544 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ .debug_info    0x000000000001c735     0x2ad5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .debug_info    0x000000000001f20a      0xdc3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .debug_info    0x000000000001ffcd     0x2975 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .debug_info    0x0000000000022942     0x1ae0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .debug_info    0x0000000000024422     0x14ff /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .debug_info    0x0000000000025921      0xced /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .debug_info    0x000000000002660e      0xde9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .debug_info    0x00000000000273f7       0xae /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .debug_info    0x00000000000274a5       0xae /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
-.debug_abbrev   0x0000000000000000     0x5ea8
+.debug_abbrev   0x0000000000000000     0x5de7
  .debug_abbrev  0x0000000000000000      0x11d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
  .debug_abbrev  0x000000000000011d       0xe6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
  .debug_abbrev  0x0000000000000203      0x17c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
@@ -1004,51 +1001,51 @@ OUTPUT(kernel.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000d6a      0x186 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
  .debug_abbrev  0x0000000000000ef0      0x149 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
  .debug_abbrev  0x0000000000001039      0x29b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_abbrev  0x00000000000012d4      0x2bc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .debug_abbrev  0x0000000000001590       0x7e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .debug_abbrev  0x000000000000160e       0xa9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
- .debug_abbrev  0x00000000000016b7       0xf1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
- .debug_abbrev  0x00000000000017a8      0x11f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
- .debug_abbrev  0x00000000000018c7      0x13a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .debug_abbrev  0x0000000000001a01      0x202 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .debug_abbrev  0x0000000000001c03      0x212 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .debug_abbrev  0x0000000000001e15       0xc6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .debug_abbrev  0x0000000000001edb      0x1bd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .debug_abbrev  0x0000000000002098      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .debug_abbrev  0x0000000000002198      0x1ea /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .debug_abbrev  0x0000000000002382      0x180 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .debug_abbrev  0x0000000000002502      0x151 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .debug_abbrev  0x0000000000002653      0x149 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .debug_abbrev  0x000000000000279c      0x1b4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .debug_abbrev  0x0000000000002950       0xf9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .debug_abbrev  0x0000000000002a49      0x12b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .debug_abbrev  0x0000000000002b74      0x1dd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .debug_abbrev  0x0000000000002d51      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .debug_abbrev  0x0000000000002ed3       0xc1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- .debug_abbrev  0x0000000000002f94      0x20e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .debug_abbrev  0x00000000000031a2      0x13e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .debug_abbrev  0x00000000000032e0      0x108 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .debug_abbrev  0x00000000000033e8      0x16e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .debug_abbrev  0x0000000000003556      0x204 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .debug_abbrev  0x000000000000375a      0x15f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .debug_abbrev  0x00000000000038b9      0x19a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .debug_abbrev  0x0000000000003a53      0x10a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .debug_abbrev  0x0000000000003b5d      0x247 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .debug_abbrev  0x0000000000003da4       0xb1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .debug_abbrev  0x0000000000003e55      0x196 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .debug_abbrev  0x0000000000003feb      0x2c6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .debug_abbrev  0x00000000000042b1      0x18f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .debug_abbrev  0x0000000000004440      0x210 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .debug_abbrev  0x0000000000004650      0x3d5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
- .debug_abbrev  0x0000000000004a25      0x3ed /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .debug_abbrev  0x0000000000004e12      0x22f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .debug_abbrev  0x0000000000005041      0x3d0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .debug_abbrev  0x0000000000005411      0x323 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
- .debug_abbrev  0x0000000000005734      0x27c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
- .debug_abbrev  0x00000000000059b0      0x26f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .debug_abbrev  0x0000000000005c1f      0x261 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
- .debug_abbrev  0x0000000000005e80       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
- .debug_abbrev  0x0000000000005e94       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x00000000000012d4      0x1fb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .debug_abbrev  0x00000000000014cf       0x7e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .debug_abbrev  0x000000000000154d       0xa9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .debug_abbrev  0x00000000000015f6       0xf1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .debug_abbrev  0x00000000000016e7      0x11f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .debug_abbrev  0x0000000000001806      0x13a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .debug_abbrev  0x0000000000001940      0x202 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .debug_abbrev  0x0000000000001b42      0x212 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .debug_abbrev  0x0000000000001d54       0xc6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .debug_abbrev  0x0000000000001e1a      0x1bd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .debug_abbrev  0x0000000000001fd7      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .debug_abbrev  0x00000000000020d7      0x1ea /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .debug_abbrev  0x00000000000022c1      0x180 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .debug_abbrev  0x0000000000002441      0x151 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .debug_abbrev  0x0000000000002592      0x149 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .debug_abbrev  0x00000000000026db      0x1b4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .debug_abbrev  0x000000000000288f       0xf9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .debug_abbrev  0x0000000000002988      0x12b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .debug_abbrev  0x0000000000002ab3      0x1dd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .debug_abbrev  0x0000000000002c90      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .debug_abbrev  0x0000000000002e12       0xc1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .debug_abbrev  0x0000000000002ed3      0x20e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .debug_abbrev  0x00000000000030e1      0x13e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .debug_abbrev  0x000000000000321f      0x108 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .debug_abbrev  0x0000000000003327      0x16e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .debug_abbrev  0x0000000000003495      0x204 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .debug_abbrev  0x0000000000003699      0x15f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .debug_abbrev  0x00000000000037f8      0x19a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .debug_abbrev  0x0000000000003992      0x10a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .debug_abbrev  0x0000000000003a9c      0x247 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .debug_abbrev  0x0000000000003ce3       0xb1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .debug_abbrev  0x0000000000003d94      0x196 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .debug_abbrev  0x0000000000003f2a      0x2c6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .debug_abbrev  0x00000000000041f0      0x18f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .debug_abbrev  0x000000000000437f      0x210 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .debug_abbrev  0x000000000000458f      0x3d5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ .debug_abbrev  0x0000000000004964      0x3ed /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .debug_abbrev  0x0000000000004d51      0x22f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .debug_abbrev  0x0000000000004f80      0x3d0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .debug_abbrev  0x0000000000005350      0x323 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .debug_abbrev  0x0000000000005673      0x27c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .debug_abbrev  0x00000000000058ef      0x26f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .debug_abbrev  0x0000000000005b5e      0x261 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .debug_abbrev  0x0000000000005dbf       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000005dd3       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
 .debug_aranges  0x0000000000000000      0x6d8
  .debug_aranges
@@ -1162,7 +1159,7 @@ OUTPUT(kernel.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000006b8       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
-.debug_line     0x0000000000000000     0x98c9
+.debug_line     0x0000000000000000     0x977c
  .debug_line    0x0000000000000000      0x13c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
  .debug_line    0x000000000000013c      0x115 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
  .debug_line    0x0000000000000251      0x20c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
@@ -1173,53 +1170,53 @@ OUTPUT(kernel.elf elf32-littlearm)
  .debug_line    0x0000000000001180      0x125 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
  .debug_line    0x00000000000012a5       0xc9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
  .debug_line    0x000000000000136e      0x181 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x00000000000014ef      0x3fa /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .debug_line    0x00000000000018e9       0x86 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .debug_line    0x000000000000196f      0x11d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
- .debug_line    0x0000000000001a8c       0xeb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
- .debug_line    0x0000000000001b77      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
- .debug_line    0x0000000000001cf9      0x1a1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .debug_line    0x0000000000001e9a      0x489 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .debug_line    0x0000000000002323      0x772 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .debug_line    0x0000000000002a95      0x1ed /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .debug_line    0x0000000000002c82      0x499 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .debug_line    0x000000000000311b      0x1b1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .debug_line    0x00000000000032cc      0x3fd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .debug_line    0x00000000000036c9      0x2f7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .debug_line    0x00000000000039c0      0x27b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .debug_line    0x0000000000003c3b      0x225 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .debug_line    0x0000000000003e60      0x3e3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .debug_line    0x0000000000004243      0x199 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .debug_line    0x00000000000043dc      0x1c4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .debug_line    0x00000000000045a0      0x31c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .debug_line    0x00000000000048bc      0x30a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .debug_line    0x0000000000004bc6      0x174 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- .debug_line    0x0000000000004d3a      0x3be /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .debug_line    0x00000000000050f8      0x197 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .debug_line    0x000000000000528f      0x1e3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .debug_line    0x0000000000005472      0x1ae /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .debug_line    0x0000000000005620      0x345 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .debug_line    0x0000000000005965      0x216 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .debug_line    0x0000000000005b7b      0x298 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .debug_line    0x0000000000005e13      0x16e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .debug_line    0x0000000000005f81      0x49d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .debug_line    0x000000000000641e       0xfc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .debug_line    0x000000000000651a      0x340 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .debug_line    0x000000000000685a      0x384 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .debug_line    0x0000000000006bde      0x1da /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
- .debug_line    0x0000000000006db8      0x34f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .debug_line    0x0000000000007107      0x54c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
- .debug_line    0x0000000000007653      0x82a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .debug_line    0x0000000000007e7d      0x2d9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .debug_line    0x0000000000008156      0x869 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .debug_line    0x00000000000089bf      0x555 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
- .debug_line    0x0000000000008f14      0x2e2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
- .debug_line    0x00000000000091f6      0x32e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .debug_line    0x0000000000009524      0x2d2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
- .debug_line    0x00000000000097f6       0x78 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
- .debug_line    0x000000000000986e       0x5b /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00000000000014ef      0x2ad /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .debug_line    0x000000000000179c       0x86 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .debug_line    0x0000000000001822      0x11d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .debug_line    0x000000000000193f       0xeb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .debug_line    0x0000000000001a2a      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .debug_line    0x0000000000001bac      0x1a1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .debug_line    0x0000000000001d4d      0x489 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .debug_line    0x00000000000021d6      0x772 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .debug_line    0x0000000000002948      0x1ed /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .debug_line    0x0000000000002b35      0x499 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .debug_line    0x0000000000002fce      0x1b1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .debug_line    0x000000000000317f      0x3fd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .debug_line    0x000000000000357c      0x2f7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .debug_line    0x0000000000003873      0x27b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .debug_line    0x0000000000003aee      0x225 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .debug_line    0x0000000000003d13      0x3e3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .debug_line    0x00000000000040f6      0x199 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .debug_line    0x000000000000428f      0x1c4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .debug_line    0x0000000000004453      0x31c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .debug_line    0x000000000000476f      0x30a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .debug_line    0x0000000000004a79      0x174 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .debug_line    0x0000000000004bed      0x3be /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .debug_line    0x0000000000004fab      0x197 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .debug_line    0x0000000000005142      0x1e3 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .debug_line    0x0000000000005325      0x1ae /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .debug_line    0x00000000000054d3      0x345 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .debug_line    0x0000000000005818      0x216 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .debug_line    0x0000000000005a2e      0x298 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .debug_line    0x0000000000005cc6      0x16e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .debug_line    0x0000000000005e34      0x49d /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .debug_line    0x00000000000062d1       0xfc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .debug_line    0x00000000000063cd      0x340 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .debug_line    0x000000000000670d      0x384 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .debug_line    0x0000000000006a91      0x1da /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .debug_line    0x0000000000006c6b      0x34f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .debug_line    0x0000000000006fba      0x54c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ .debug_line    0x0000000000007506      0x82a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .debug_line    0x0000000000007d30      0x2d9 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .debug_line    0x0000000000008009      0x869 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .debug_line    0x0000000000008872      0x555 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .debug_line    0x0000000000008dc7      0x2e2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .debug_line    0x00000000000090a9      0x32e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .debug_line    0x00000000000093d7      0x2d2 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .debug_line    0x00000000000096a9       0x78 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000009721       0x5b /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
-.debug_str      0x0000000000000000     0x92f1
+.debug_str      0x0000000000000000     0x91d2
  .debug_str     0x0000000000000000      0x281 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
                                         0x2ce (size before relaxing)
  .debug_str     0x0000000000000281      0x109 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
@@ -1240,91 +1237,91 @@ OUTPUT(kernel.elf elf32-littlearm)
                                         0x3af (size before relaxing)
  .debug_str     0x0000000000001d06      0x1d6 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
                                         0x78a (size before relaxing)
- .debug_str     0x0000000000001edc      0x8e5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
-                                       0x100c (size before relaxing)
- .debug_str     0x00000000000027c1       0x76 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .debug_str     0x0000000000001edc      0x1cf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+                                        0x83f (size before relaxing)
+ .debug_str     0x00000000000020ab       0x76 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
                                         0x1a7 (size before relaxing)
- .debug_str     0x0000000000002837       0x8f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .debug_str     0x0000000000002121       0x8f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
                                         0x1d5 (size before relaxing)
- .debug_str     0x00000000000028c6       0x4c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .debug_str     0x00000000000021b0       0x4c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
                                         0x1fe (size before relaxing)
- .debug_str     0x0000000000002912      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .debug_str     0x00000000000021fc      0x100 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
                                         0x27f (size before relaxing)
- .debug_str     0x0000000000002a12      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .debug_str     0x00000000000022fc      0x182 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
                                         0x39c (size before relaxing)
- .debug_str     0x0000000000002b94      0xf71 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .debug_str     0x000000000000247e      0xf71 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
                                        0x128e (size before relaxing)
- .debug_str     0x0000000000003b05      0x684 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .debug_str     0x00000000000033ef      0x684 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
                                        0x1101 (size before relaxing)
- .debug_str     0x0000000000004189      0x159 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .debug_str     0x0000000000003a73      0x159 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
                                         0x358 (size before relaxing)
- .debug_str     0x00000000000042e2      0x5cc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .debug_str     0x0000000000003bcc      0x5cc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
                                         0xf45 (size before relaxing)
- .debug_str     0x00000000000048ae      0x110 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .debug_str     0x0000000000004198      0x110 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
                                         0x502 (size before relaxing)
- .debug_str     0x00000000000049be      0x253 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .debug_str     0x00000000000042a8      0x253 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
                                         0xc40 (size before relaxing)
- .debug_str     0x0000000000004c11      0x14e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .debug_str     0x00000000000044fb      0x14e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
                                         0xe49 (size before relaxing)
- .debug_str     0x0000000000004d5f      0x16a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .debug_str     0x0000000000004649      0x16a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
                                         0x885 (size before relaxing)
- .debug_str     0x0000000000004ec9      0x154 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .debug_str     0x00000000000047b3      0x154 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
                                         0x936 (size before relaxing)
- .debug_str     0x000000000000501d      0x145 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .debug_str     0x0000000000004907      0x145 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
                                         0xc5b (size before relaxing)
- .debug_str     0x0000000000005162       0xbf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .debug_str     0x0000000000004a4c       0xbf /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
                                         0x2cd (size before relaxing)
- .debug_str     0x0000000000005221       0xf7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .debug_str     0x0000000000004b0b       0xf7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
                                         0x359 (size before relaxing)
- .debug_str     0x0000000000005318      0x1ac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .debug_str     0x0000000000004c02      0x1ac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
                                         0xc25 (size before relaxing)
- .debug_str     0x00000000000054c4      0x1ab /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .debug_str     0x0000000000004dae      0x1ab /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
                                         0x3fa (size before relaxing)
- .debug_str     0x000000000000566f      0x117 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .debug_str     0x0000000000004f59      0x117 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
                                         0x2fb (size before relaxing)
- .debug_str     0x0000000000005786      0x5a5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .debug_str     0x0000000000005070      0x5a5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
                                        0x10ed (size before relaxing)
- .debug_str     0x0000000000005d2b      0x1bb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .debug_str     0x0000000000005615      0x1bb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
                                         0x47f (size before relaxing)
- .debug_str     0x0000000000005ee6      0x14f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .debug_str     0x00000000000057d0      0x14f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
                                         0x4ac (size before relaxing)
- .debug_str     0x0000000000006035      0x24e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .debug_str     0x000000000000591f      0x24e /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
                                         0x65f (size before relaxing)
- .debug_str     0x0000000000006283      0x217 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .debug_str     0x0000000000005b6d      0x217 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
                                        0x1106 (size before relaxing)
- .debug_str     0x000000000000649a       0x8a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .debug_str     0x0000000000005d84       0x8a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
                                         0xa27 (size before relaxing)
- .debug_str     0x0000000000006524       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .debug_str     0x0000000000005e0e       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
                                         0xb6c (size before relaxing)
- .debug_str     0x00000000000065fc      0x140 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .debug_str     0x0000000000005ee6      0x140 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
                                         0x418 (size before relaxing)
- .debug_str     0x000000000000673c      0x22c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .debug_str     0x0000000000006026      0x22c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
                                         0xdca (size before relaxing)
- .debug_str     0x0000000000006968       0x8a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .debug_str     0x0000000000006252       0x8a /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
                                         0x27f (size before relaxing)
- .debug_str     0x00000000000069f2       0xd4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .debug_str     0x00000000000062dc       0xd4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
                                         0xa8e (size before relaxing)
- .debug_str     0x0000000000006ac6      0x492 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .debug_str     0x00000000000063b0      0x4d7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
                                         0xd59 (size before relaxing)
- .debug_str     0x0000000000006f58       0x5b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
+ .debug_str     0x0000000000006887       0x5b /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DHCP.o
                                         0x819 (size before relaxing)
- .debug_str     0x0000000000006fb3      0x264 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .debug_str     0x00000000000068e2      0x28f /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
                                         0xafd (size before relaxing)
- .debug_str     0x0000000000007217      0xac5 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ .debug_str     0x0000000000006b71     0x1043 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
                                        0x1d3a (size before relaxing)
- .debug_str     0x0000000000007cdc      0x8b4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .debug_str     0x0000000000007bb4      0x8bd /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
                                        0x1a0a (size before relaxing)
- .debug_str     0x0000000000008590       0xe7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .debug_str     0x0000000000008471       0xe7 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
                                         0x9a4 (size before relaxing)
- .debug_str     0x0000000000008677      0x495 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .debug_str     0x0000000000008558      0x495 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
                                        0x17f9 (size before relaxing)
- .debug_str     0x0000000000008b0c      0x3d1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .debug_str     0x00000000000089ed      0x3d1 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
                                         0xef3 (size before relaxing)
- .debug_str     0x0000000000008edd       0xad /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .debug_str     0x0000000000008dbe       0xad /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
                                        0x1171 (size before relaxing)
- .debug_str     0x0000000000008f8a      0x1eb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .debug_str     0x0000000000008e6b      0x1eb /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
                                         0xa89 (size before relaxing)
- .debug_str     0x0000000000009175      0x17c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .debug_str     0x0000000000009056      0x17c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
                                         0xb1e (size before relaxing)
 
 .comment        0x0000000000000000       0x31
@@ -1498,7 +1495,7 @@ OUTPUT(kernel.elf elf32-littlearm)
  .ARM.attributes
                 0x00000000000009e9       0x18 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x0000000000000000     0x5640
+.debug_frame    0x0000000000000000     0x55b0
  .debug_frame   0x0000000000000000       0xb0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/port.o
  .debug_frame   0x00000000000000b0       0x90 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/GCC/RaspberryPi/portisr.o
  .debug_frame   0x0000000000000140       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/croutine.o
@@ -1509,49 +1506,49 @@ OUTPUT(kernel.elf elf32-littlearm)
  .debug_frame   0x0000000000000b98      0x14c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/interrupts.o
  .debug_frame   0x0000000000000ce4       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/gpio.o
  .debug_frame   0x0000000000000dd4       0xd0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_frame   0x0000000000000ea4      0x12c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
- .debug_frame   0x0000000000000fd0       0x50 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
- .debug_frame   0x0000000000001020       0x60 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
- .debug_frame   0x0000000000001080      0x11c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
- .debug_frame   0x000000000000119c      0x134 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
- .debug_frame   0x00000000000012d0      0x1a4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
- .debug_frame   0x0000000000001474      0x270 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
- .debug_frame   0x00000000000016e4      0x4d4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
- .debug_frame   0x0000000000001bb8      0x1f0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
- .debug_frame   0x0000000000001da8      0x434 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
- .debug_frame   0x00000000000021dc       0xb4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
- .debug_frame   0x0000000000002290      0x23c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
- .debug_frame   0x00000000000024cc       0x54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
- .debug_frame   0x0000000000002520      0x1d4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
- .debug_frame   0x00000000000026f4      0x190 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
- .debug_frame   0x0000000000002884       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
- .debug_frame   0x000000000000295c       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
- .debug_frame   0x0000000000002a08      0x174 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
- .debug_frame   0x0000000000002b7c      0x160 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
- .debug_frame   0x0000000000002cdc      0x208 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
- .debug_frame   0x0000000000002ee4      0x170 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
- .debug_frame   0x0000000000003054      0x180 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
- .debug_frame   0x00000000000031d4       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
- .debug_frame   0x00000000000032c4       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
- .debug_frame   0x00000000000033b4       0xf4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
- .debug_frame   0x00000000000034a8      0x198 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
- .debug_frame   0x0000000000003640       0x74 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
- .debug_frame   0x00000000000036b4       0xdc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
- .debug_frame   0x0000000000003790       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
- .debug_frame   0x0000000000003880      0x184 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
- .debug_frame   0x0000000000003a04       0x5c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
- .debug_frame   0x0000000000003a60       0xe8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
- .debug_frame   0x0000000000003b48      0x130 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
- .debug_frame   0x0000000000003c78      0x114 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
- .debug_frame   0x0000000000003d8c      0x530 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
- .debug_frame   0x00000000000042bc      0x720 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
- .debug_frame   0x00000000000049dc      0x110 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
- .debug_frame   0x0000000000004aec      0x564 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
- .debug_frame   0x0000000000005050      0x420 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
- .debug_frame   0x0000000000005470       0x54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
- .debug_frame   0x00000000000054c4       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
- .debug_frame   0x00000000000055b4       0x6c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
- .debug_frame   0x0000000000005620       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000000000000ea4       0x9c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/main.o
+ .debug_frame   0x0000000000000f40       0x50 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mailbox.o
+ .debug_frame   0x0000000000000f90       0x60 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Demo/trace.o
+ .debug_frame   0x0000000000000ff0      0x11c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/mem.o
+ .debug_frame   0x000000000000110c      0x134 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/video.o
+ .debug_frame   0x0000000000001240      0x1a4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/uspibind.o
+ .debug_frame   0x00000000000013e4      0x270 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/uspilibrary.o
+ .debug_frame   0x0000000000001654      0x4d4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcidevice.o
+ .debug_frame   0x0000000000001b28      0x1f0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciregister.o
+ .debug_frame   0x0000000000001d18      0x434 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcixferstagedata.o
+ .debug_frame   0x000000000000214c       0xb4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
+ .debug_frame   0x0000000000002200      0x23c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevice.o
+ .debug_frame   0x000000000000243c       0x54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbdevicefactory.o
+ .debug_frame   0x0000000000002490      0x1d4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbendpoint.o
+ .debug_frame   0x0000000000002664      0x190 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbrequest.o
+ .debug_frame   0x00000000000027f4       0xd8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstandardhub.o
+ .debug_frame   0x00000000000028cc       0xac /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/devicenameservice.o
+ .debug_frame   0x0000000000002978      0x174 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/macaddress.o
+ .debug_frame   0x0000000000002aec      0x160 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/smsc951x.o
+ .debug_frame   0x0000000000002c4c      0x208 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/string.o
+ .debug_frame   0x0000000000002e54      0x170 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/util.o
+ .debug_frame   0x0000000000002fc4      0x180 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmassdevice.o
+ .debug_frame   0x0000000000003144       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednper.o
+ .debug_frame   0x0000000000003234       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschedper.o
+ .debug_frame   0x0000000000003324       0xf4 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/keymap.o
+ .debug_frame   0x0000000000003418      0x198 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbkeyboard.o
+ .debug_frame   0x00000000000035b0       0x74 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhcirootport.o
+ .debug_frame   0x0000000000003624       0xdc /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbmouse.o
+ .debug_frame   0x0000000000003700       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/dwhciframeschednsplit.o
+ .debug_frame   0x00000000000037f0      0x184 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbgamepad.o
+ .debug_frame   0x0000000000003974       0x5c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/synchronize.o
+ .debug_frame   0x00000000000039d0       0xe8 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbstring.o
+ .debug_frame   0x0000000000003ab8      0x130 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_ARP.o
+ .debug_frame   0x0000000000003be8      0x114 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_DNS.o
+ .debug_frame   0x0000000000003cfc      0x530 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_IP.o
+ .debug_frame   0x000000000000422c      0x720 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Sockets.o
+ .debug_frame   0x000000000000494c      0x110 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_Stream_Buffer.o
+ .debug_frame   0x0000000000004a5c      0x564 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_IP.o
+ .debug_frame   0x0000000000004fc0      0x420 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_TCP_WIN.o
+ .debug_frame   0x00000000000053e0       0x54 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/FreeRTOS_UDP_IP.o
+ .debug_frame   0x0000000000005434       0xf0 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_2.o
+ .debug_frame   0x0000000000005524       0x6c /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/FreeRTOS-Plus-TCP/portable/NetworkInterface.o
+ .debug_frame   0x0000000000005590       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/libgcc.a(_udivsi3.o)
 
 .debug_ranges   0x0000000000000000       0x78
  .debug_ranges  0x0000000000000000       0x18 /home/aaronli/freeRTOSbuild/RaspberryPi-FreeRTOS/build/Drivers/lan9514/lib/usbconfigparser.o
